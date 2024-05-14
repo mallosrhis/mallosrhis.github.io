@@ -2,11 +2,25 @@
   {
     "title": "Game 1",
     "coverImage": "images/game1-cover.jpg",
-    "description": "This game is amazing!"
+    "description": "This game is amazing!",
+    "played": true
   },
   {
     "title": "Game 2",
     "coverImage": "images/game2-cover.jpg",
-    "description": "This game is so much fun!"
+    "description": "This game is so much fun!",
+    "played": false
+  },
+  {
+    "title": "Game 3",
+    "coverImage": "images/game1-cover.jpg",
+    "description": "Exciting adventure awaits!",
+    "played": true
+  },
+  {
+    "title": "Game 4",
+    "coverImage": "images/game2-cover.jpg",
+    "description": "The ultimate challenge!",
+    "played": false
   }
 ]
