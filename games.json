@@ -1,12 +1,12 @@
 [
   {
     "title": "Game 1",
-    "coverImage": "game1-cover.jpg",
+    "coverImage": "images/game1-cover.jpg",
     "description": "This game is amazing!"
   },
   {
     "title": "Game 2",
-    "coverImage": "game2-cover.jpg",
+    "coverImage": "images/game2-cover.jpg",
     "description": "This game is so much fun!"
   }
 ]
