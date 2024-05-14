@@ -53,20 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('games.json')
     .then(response => response.json())
     .then(data => {
-      // Split games into played and backlog
-      const playedGames = data.filter(game => game.played);
-      const backlogGames = data.filter(game => !game.played);
-
-      // Dynamically generate played games list
-      playedGames.forEach(game => {
+      // Dynamically generate played and backlog games lists
+      data.forEach(game => {
         const listItem = createGameListItem(game);
-        playedGamesList.appendChild(listItem);
-      });
-
-      // Dynamically generate backlog games list
-      backlogGames.forEach(game => {
-        const listItem = createGameListItem(game);
-        backlogGamesList.appendChild(listItem);
+        if (game.played) {
+          playedGamesList.appendChild(listItem);
+        } else {
+          backlogGamesList.appendChild(listItem);
+        }
       });
 
       // Add event listener to open modal when game cover is clicked
