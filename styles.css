@@ -55,7 +55,7 @@ h1 {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow flex items to wrap */
   justify-content: center;
   margin-top: 2rem;
 }
@@ -75,6 +75,7 @@ h1 {
 .game-cover img {
   object-fit: cover;
   transition: transform .3s ease-in-out;
+  max-width: 100%; /* Ensure image doesn't exceed its container width */
 }
 
 .game-cover:hover img {
