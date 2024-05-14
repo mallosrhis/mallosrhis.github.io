@@ -15,6 +15,11 @@ h1 {
   color: #fff;
 }
 
+/* Center the section titles */
+.section-title {
+  text-align: center;
+}
+
 .game-list {
   list-style: none;
   padding: 0;
