@@ -47,6 +47,10 @@ h1 {
   color: #fff;
 }
 
+.game-section {
+  text-align: center; /* Center section titles */
+}
+
 .game-list {
   list-style: none;
   padding: 0;
