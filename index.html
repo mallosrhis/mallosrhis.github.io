@@ -7,25 +7,33 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-theme">
+  <div class="navbar" id="navbar">
+    <a href="#" class="active">Home</a>
+    <a href="#played-games">Played Games</a>
+    <a href="#backlog-games">Backlog</a>
+  </div>
+
   <header>
     <h1>Video Games I've Played</h1>
   </header>
+  
   <main>
     <div class="container">
-      <section class="game-section">
-        <h2 class="section-title">Games I've Played</h2>
-        <ul class="game-list" id="played-games">
+      <section class="game-section" id="played-games">
+        <h2 class="section-title">Played Games</h2>
+        <ul class="game-list">
           <!-- Played games will be dynamically added here -->
         </ul>
       </section>
-      <section class="game-section">
+      <section class="game-section" id="backlog-games">
         <h2 class="section-title">Backlog</h2>
-        <ul class="game-list" id="backlog-games">
+        <ul class="game-list">
           <!-- Backlog games will be dynamically added here -->
         </ul>
       </section>
     </div>
   </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
