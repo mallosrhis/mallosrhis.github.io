@@ -8,27 +8,26 @@
 </head>
 <body class="dark-theme">
   <header>
-    <nav class="navbar">
-      <div class="container">
-        <h1 class="logo"><a href="#">Video Games 12.20</a></h1>
-        <ul class="nav-menu">
-          <li><a href="#played-games">Played</a></li>
-          <li><a href="#backlog-games">Backlog</a></li>
-        </ul>
-      </div>
+    <nav class="sticky-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#played-games">Played Games</a></li>
+        <li><a href="#backlog-games">Backlog</a></li>
+      </ul>
     </nav>
+    <h1>Video Games I've Played</h1>
   </header>
   <main>
     <div class="container">
-      <section class="game-section">
+      <section class="game-section" id="played-games">
         <h2 class="section-title">Games I've Played</h2>
-        <ul class="game-list" id="played-games">
+        <ul class="game-list">
           <!-- Played games will be dynamically added here -->
         </ul>
       </section>
-      <section class="game-section">
+      <section class="game-section" id="backlog-games">
         <h2 class="section-title">Backlog</h2>
-        <ul class="game-list" id="backlog-games">
+        <ul class="game-list">
           <!-- Backlog games will be dynamically added here -->
         </ul>
       </section>
