@@ -2,6 +2,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #222;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -10,12 +12,56 @@ body {
   padding: 2rem;
 }
 
-h1, .section-title {
-  text-align: center;
+/* Sticky Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  padding: 1rem 0;
 }
 
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.nav-menu li:last-child {
+  margin-right: 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #ddd;
+}
+
+/* Section Styles */
 .game-section {
   margin-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
 }
 
 .game-list {
