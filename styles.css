@@ -10,6 +10,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 80px; /* Add padding to the top to prevent content from being hidden behind the navbar */
 }
 
 /* Sticky Navbar */
@@ -61,7 +62,6 @@ body {
 
 /* Section Styles */
 .game-section {
-  margin-top: 80px; /* Adjust to accommodate the sticky navbar */
   margin-bottom: 2rem;
 }
 
