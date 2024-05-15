@@ -20,15 +20,19 @@ body {
   background-color: #333;
   z-index: 1000;
   top: 0;
-  padding: 1rem 0;
+  padding: 0.5rem 0; /* Reduced padding */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 1rem; /* Add padding to the sides */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 .logo {
   margin: 0;
