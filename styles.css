@@ -4,7 +4,6 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  padding-top: 80px; /* Add padding to the top of the body to prevent content from being hidden behind the navbar */
 }
 
 .container {
@@ -20,11 +19,14 @@ body {
   background-color: #333;
   z-index: 1000;
   top: 0;
-  padding: 0.3rem 0;
+  padding: 0.3rem 0; /* Reduced padding */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
+  max-width: 1200px; /* Limit the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 1rem; /* Add padding to the sides */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +35,12 @@ body {
 .logo {
   margin: 0;
   color: #fff;
+  font-size: 1.5rem; /* Adjust font size */
+  text-decoration: none; /* Remove underline */
+}
+
+.logo:hover {
+  color: #fff; /* Change color on hover */
 }
 
 .nav-menu {
