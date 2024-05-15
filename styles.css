@@ -2,9 +2,41 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #222;
   color: #fff;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.sticky-nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
+
+.sticky-nav li {
+  margin: 0 1rem;
+}
+
+.sticky-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sticky-nav a:hover {
+  color: #ccc;
+}
+
+/* Rest of the styles remain the same */
 
 .container {
   max-width: 1200px;
@@ -12,69 +44,12 @@ body {
   padding: 2rem;
 }
 
-/* Sticky Navbar */
-.navbar {
-  position: fixed;
-  width: 100%;
-  background-color: #333;
-  z-index: 1000;
-  top: 0;
-  padding: 0.3rem 0; /* Reduced padding */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+h1, .section-title {
+  text-align: center;
 }
 
-.navbar .container {
-  max-width: 1200px; /* Limit the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0 1rem; /* Add padding to the sides */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  margin: 0;
-  color: #fff;
-  font-size: 1.5rem; /* Adjust font size */
-  text-decoration: none; /* Remove underline */
-}
-
-.logo:hover {
-  color: #fff; /* Change color on hover */
-}
-
-.nav-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-.nav-menu li:last-child {
-  margin-right: 0;
-}
-
-.nav-menu a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: #ddd;
-}
-
-/* Section Styles */
 .game-section {
   margin-bottom: 2rem;
-}
-
-.section-title {
-  text-align: center;
 }
 
 .game-list {
