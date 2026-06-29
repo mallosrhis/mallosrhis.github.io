@@ -6,7 +6,11 @@
     "year": 2013,
     "coverImage": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg",
     "rawgUrl": "https://rawg.io/games/grand-theft-auto-v",
-    "genres": ["Action", "Open World", "Shooter"],
+    "genres": [
+      "Action",
+      "Open World",
+      "Shooter"
+    ],
     "metacritic": 97,
     "played": true,
     "platform": "PS5",
@@ -23,7 +27,11 @@
     "year": 2018,
     "coverImage": "https://media.rawg.io/media/games/511/5118aff5091a4517e24b14a64c1ffc94.jpg",
     "rawgUrl": "https://rawg.io/games/red-dead-redemption-2",
-    "genres": ["Action", "Adventure", "Open World"],
+    "genres": [
+      "Action",
+      "Adventure",
+      "Open World"
+    ],
     "metacritic": 97,
     "played": true,
     "platform": "PS5",
@@ -31,7 +39,7 @@
     "datePlayed": "2024-01",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": "One of the most immersive games ever made. Arthur Morgan's story is genuinely moving. The slow pace is not a flaw — it's the point."
+    "description": "One of the most immersive games ever made. Arthur Morgan's story is genuinely moving. The slow pace is not a flaw â it's the point."
   },
   {
     "id": 41494,
@@ -40,7 +48,11 @@
     "year": 2020,
     "coverImage": "https://media.rawg.io/media/games/1f4/1f47a270b8f241f3e70a50d963e08be6.jpg",
     "rawgUrl": "https://rawg.io/games/hades",
-    "genres": ["Action", "Roguelike", "Indie"],
+    "genres": [
+      "Action",
+      "Roguelike",
+      "Indie"
+    ],
     "metacritic": 93,
     "played": false,
     "platform": null,
@@ -53,11 +65,14 @@
   {
     "id": 58175,
     "slug": "god-of-war-ragnarok",
-    "title": "God of War Ragnarök",
+    "title": "God of War RagnarÃ¶k",
     "year": 2022,
     "coverImage": "https://media.rawg.io/media/games/121/121a38d7f7abe01de3e9046af1d1e58e.jpg",
     "rawgUrl": "https://rawg.io/games/god-of-war-ragnarok",
-    "genres": ["Action", "Adventure"],
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
     "metacritic": 94,
     "played": false,
     "platform": null,
@@ -66,5 +81,25 @@
     "completionStatus": null,
     "rating": null,
     "description": null
+  },
+  {
+    "id": 3990,
+    "slug": "the-last-of-us",
+    "title": "The Last Of Us",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/a5a/a5a7fb8d9cb8063a8b42ee002b410db6.jpg",
+    "rawgUrl": "https://rawg.io/games/the-last-of-us",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 95,
+    "played": true,
+    "platform": "PS3",
+    "platformType": "PlayStation",
+    "datePlayed": "2019-01",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "excellent game!"
   }
 ]
