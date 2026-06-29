@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A record of worlds explored, stories experienced, and adventures still waiting.">
+  <title>Mallosrhis Plays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Mallosrhis Plays</h1>
+    <p class="header-tagline">A record of worlds explored, stories experienced, and adventures still waiting.</p>
+    <p class="header-quote">"We don't stop playing because we grow old; we grow old because we stop playing." — George Bernard Shaw</p>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- CONTROLS -->
+      <div class="controls-bar">
+        <input type="search" id="search-input" class="search-input" placeholder="Search games…" autocomplete="off">
+        <div class="sort-group">
+          <label for="sort-select" class="sort-label">Sort</label>
+          <select id="sort-select" class="sort-select">
+            <option value="date-desc">Date played (newest)</option>
+            <option value="date-asc">Date played (oldest)</option>
+            <option value="rating-desc">Rating (highest)</option>
+            <option value="rating-asc">Rating (lowest)</option>
+            <option value="title-asc">Title (A–Z)</option>
+            <option value="title-desc">Title (Z–A)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- PLAYED -->
+      <section class="game-section" id="section-played">
+        <h2 class="section-title">Played</h2>
+        <p class="section-quote">Every game finished leaves a memory. Every game started promises one.</p>
+        <ul class="game-list" id="played-games"></ul>
+        <p class="empty-msg" id="played-empty" style="display:none">No games match your search.</p>
+      </section>
+
+      <!-- BACKLOG -->
+      <section class="game-section" id="section-backlog">
+        <h2 class="section-title">Backlog</h2>
+        <p class="section-quote">The backlog isn't a burden — it's a map of adventures yet to come.</p>
+        <ul class="game-list" id="backlog-games"></ul>
+        <p class="empty-msg" id="backlog-empty" style="display:none">No games match your search.</p>
+      </section>
+
+      <!-- BOTTOM QUOTE -->
+      <div class="bottom-quote">
+        <p>Growing older is inevitable. Growing bored is optional.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-inner">
+        <img class="modal-poster" id="modal-poster" src="" alt="">
+        <div class="modal-details">
+          <h2 class="modal-title" id="modal-title"></h2>
+          <p class="modal-year" id="modal-year"></p>
+          <div class="modal-genres" id="modal-genres"></div>
+          <p class="modal-description" id="modal-description"></p>
+          <div class="modal-meta">
+            <div class="modal-meta-row" id="modal-rating-row">
+              <span class="meta-label">My Rating</span>
+              <span class="meta-stars" id="modal-stars"></span>
+              <span class="meta-value" id="modal-rating"></span>
+            </div>
+            <div class="modal-meta-row" id="modal-metacritic-row">
+              <span class="meta-label">Metacritic</span>
+              <span class="metacritic-badge" id="modal-metacritic"></span>
+            </div>
+            <div class="modal-meta-row" id="modal-platform-row">
+              <span class="meta-label">Platform</span>
+              <span class="meta-value" id="modal-platform"></span>
+            </div>
+            <div class="modal-meta-row" id="modal-date-row">
+              <span class="meta-label">Played</span>
+              <span class="meta-value" id="modal-date"></span>
+            </div>
+            <div class="modal-meta-row" id="modal-status-row">
+              <span class="meta-label">Status</span>
+              <span class="meta-value dropped-label" id="modal-status"></span>
+            </div>
+          </div>
+          <a class="modal-rawg-link" id="modal-rawg-link" href="#" target="_blank" rel="noopener">View on RAWG &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-left">Data via <a href="https://rawg.io" target="_blank" rel="noopener" class="footer-plain-link">RAWG</a></span>
+      <span class="footer-center">Made with <span class="heart">♥</span> by <a href="https://github.com/mallosrhis" target="_blank" rel="noopener" class="footer-plain-link">Mallosrhis</a> &middot; Last updated <span id="last-updated">—</span></span>
+      <span class="footer-right">
+        <a href="stats.html" class="footer-link">Statistics</a>
+        <a href="admin.html" class="footer-link">&#9881; Manage</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

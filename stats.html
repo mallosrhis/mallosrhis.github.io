@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statistics — Game Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --bg: #1a1f2e;
+      --surface: #242938;
+      --surface2: #2c3347;
+      --accent: #7c6af7;
+      --accent-hover: #9b8dff;
+      --text: #e8eaf0;
+      --text-muted: #8b90a0;
+      --border: rgba(255,255,255,0.07);
+      --success: #4caf82;
+      --error: #e05c5c;
+      --star-on: #f5c842;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Exo 2', sans-serif;
+      color: var(--text);
+      padding: 2rem 1rem 4rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Back Link ── */
+    .back-link {
+      display: inline-block;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      opacity: 0.6;
+      background: none;
+      border: none;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .back-link:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    /* ── Page Header ── */
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    /* ── Section Labels ── */
+    .section-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin: 2.5rem 0 1rem;
+    }
+
+    /* ── Summary Cards ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+    }
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── Chart Cards ── */
+    .chart-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .chart-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .chart-wrapper {
+      position: relative;
+    }
+    .chart-wrapper--bar { height: 300px; }
+    .chart-wrapper--doughnut { height: 240px; }
+    .chart-wrapper--time { height: 200px; }
+    .chart-wrapper--bar-sm { height: 220px; }
+
+    /* ── Two-Column Rows ── */
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .row-full {
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── Toggle Buttons ── */
+    .toggle-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .toggle-btn {
+      padding: 0.28rem 0.75rem;
+      border-radius: 20px;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+    }
+    .toggle-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .toggle-btn:hover:not(.active) {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    /* ── Doughnut Center Label ── */
+    .doughnut-wrap {
+      position: relative;
+    }
+    .doughnut-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+    }
+    .doughnut-center-num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+    }
+    .doughnut-center-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.2rem;
+    }
+
+    /* ── Heatmap ── */
+    .heatmap-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .heatmap-inner {
+      min-width: 480px;
+    }
+    .heatmap-month-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .heatmap-year-label {
+      width: 40px;
+      min-width: 40px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-align: right;
+      padding-right: 8px;
+    }
+    .heatmap-header-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .heatmap-header-spacer {
+      width: 40px;
+      min-width: 40px;
+    }
+    .heatmap-month-lbl {
+      width: 32px;
+      min-width: 32px;
+      height: 18px;
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .heatmap-cell {
+      width: 32px;
+      min-width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: #2c3347;
+      cursor: default;
+      transition: opacity 0.15s;
+      flex-shrink: 0;
+    }
+    .heatmap-cell:hover { opacity: 0.8; }
+    .heatmap-cell[data-count="1"] { background: rgba(124,106,247,0.35); }
+    .heatmap-cell[data-count="2"] { background: rgba(124,106,247,0.6); }
+    .heatmap-cell[data-count="3"] { background: #7c6af7; }
+
+    .heatmap-legend {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .heatmap-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .heatmap-legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+    }
+
+    /* ── Backlog Summary Card ── */
+    .backlog-summary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+    .backlog-anticipated {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+    .backlog-anticipated span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Back link -->
+  <a href="index.html" class="back-link">← Games</a>
+
+  <!-- Page header -->
+  <h1>Statistics</h1>
+  <p class="subtitle">"A record of worlds explored, stories experienced, and adventures still waiting."</p>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  SUMMARY CARDS                         -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="stat-value" id="stat-total-played">—</div>
+      <div class="stat-label">Games Played</div>
+    </div>
+    <div class="summary-card">
+      <div class="stat-value" id="stat-avg-rating">—</div>
+      <div class="stat-label">Avg Rating</div>
+    </div>
+    <div class="summary-card">
+      <div class="stat-value" id="stat-top-platform">—</div>
+      <div class="stat-label">Most Played Platform</div>
+    </div>
+    <div class="summary-card">
+      <div class="stat-value" id="stat-top-genre">—</div>
+      <div class="stat-label">Top Genre</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  PLAYED GAMES SECTION                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="section-label">Played Games</div>
+
+  <!-- ROW 1: Rating Distribution + Completion Status -->
+  <div class="row-2">
+    <div class="chart-card">
+      <div class="chart-title">Rating Distribution</div>
+      <div class="chart-wrapper chart-wrapper--bar">
+        <canvas id="ratingChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Completion Status</div>
+      <div class="chart-wrapper chart-wrapper--doughnut doughnut-wrap">
+        <canvas id="completionChart"></canvas>
+        <div class="doughnut-center">
+          <div class="doughnut-center-num" id="doughnut-total">—</div>
+          <div class="doughnut-center-label">Total</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Games by Platform + Games by Genre -->
+  <div class="row-2">
+    <div class="chart-card">
+      <div class="chart-title">Games by Platform</div>
+      <div class="toggle-group">
+        <button class="toggle-btn active" id="btn-platform" onclick="switchPlatformView('platform')">Platform</button>
+        <button class="toggle-btn" id="btn-platformtype" onclick="switchPlatformView('platformtype')">Platform Type</button>
+      </div>
+      <div class="chart-wrapper chart-wrapper--bar">
+        <canvas id="platform-chart-canvas"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Games by Genre</div>
+      <div class="chart-wrapper chart-wrapper--bar">
+        <canvas id="genreChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Games Played Over Time -->
+  <div class="row-full">
+    <div class="chart-card">
+      <div class="chart-title">Games Played Over Time</div>
+      <div class="chart-wrapper chart-wrapper--time">
+        <canvas id="timeChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Avg Rating by Platform Type + Avg Rating by Genre -->
+  <div class="row-2">
+    <div class="chart-card">
+      <div class="chart-title">Avg Rating by Platform Type</div>
+      <div class="chart-wrapper chart-wrapper--bar-sm">
+        <canvas id="avgPlatformChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Avg Rating by Genre</div>
+      <div class="chart-wrapper chart-wrapper--bar-sm">
+        <canvas id="avgGenreChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  ACTIVITY SECTION                      -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="section-label">Activity</div>
+
+  <div class="row-full">
+    <div class="chart-card">
+      <div class="chart-title">When I Played — Month Heatmap</div>
+      <div class="heatmap-scroll">
+        <div class="heatmap-inner" id="heatmap-container"></div>
+      </div>
+      <div class="heatmap-legend">
+        <div class="heatmap-legend-item">
+          <div class="heatmap-legend-swatch" style="background:#2c3347;border:1px solid rgba(255,255,255,0.12);"></div>
+          <span>0</span>
+        </div>
+        <div class="heatmap-legend-item">
+          <div class="heatmap-legend-swatch" style="background:rgba(124,106,247,0.35);"></div>
+          <span>1</span>
+        </div>
+        <div class="heatmap-legend-item">
+          <div class="heatmap-legend-swatch" style="background:rgba(124,106,247,0.6);"></div>
+          <span>2</span>
+        </div>
+        <div class="heatmap-legend-item">
+          <div class="heatmap-legend-swatch" style="background:#7c6af7;"></div>
+          <span>3+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  BACKLOG SECTION                       -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="section-label">Backlog</div>
+
+  <div class="row-2">
+    <div class="chart-card">
+      <div class="chart-title">Backlog by Genre</div>
+      <div class="chart-wrapper chart-wrapper--bar">
+        <canvas id="backlogGenreChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card" style="display:flex;align-items:center;">
+      <div class="backlog-summary">
+        <div class="stat-value" id="stat-backlog-total">—</div>
+        <div class="stat-label">Games in Backlog</div>
+        <p class="backlog-anticipated">Most anticipated genre: <span id="stat-backlog-genre">—</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--  FOOTER                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    Powered by Chart.js &amp; RAWG · © Mallosrhis
+  </footer>
+
+</div><!-- /.container -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   Chart.js global defaults
+═══════════════════════════════════════════════════════════ */
+Chart.defaults.color = '#8b90a0';
+Chart.defaults.borderColor = 'rgba(255,255,255,0.07)';
+Chart.defaults.font.family = "'Exo 2', sans-serif";
+
+/* ═══════════════════════════════════════════════════════════
+   Shared helpers
+═══════════════════════════════════════════════════════════ */
+const ACCENT      = '#7c6af7';
+const ERROR_COL   = '#e05c5c';
+const SUCCESS_COL = '#4caf82';
+const STAR_COL    = '#f5c842';
+const GRID_COL    = 'rgba(255,255,255,0.05)';
+const TOOLTIP_BG  = '#242938';
+const BORDER_COL  = 'rgba(255,255,255,0.07)';
+
+/** Count occurrences of each value in an array → sorted [{label, count}] */
+function countBy(arr) {
+  const map = {};
+  arr.forEach(v => { map[v] = (map[v] || 0) + 1; });
+  return Object.entries(map)
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) => ({ label, count }));
+}
+
+/** Shared tooltip config */
+function tooltipConfig() {
+  return {
+    backgroundColor: TOOLTIP_BG,
+    borderColor: BORDER_COL,
+    borderWidth: 1,
+    titleColor: '#e8eaf0',
+    bodyColor: '#8b90a0',
+    padding: 10,
+  };
+}
+
+/** Shared bar options (horizontal) */
+function hBarOptions(extra = {}) {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: {
+      legend: { display: false },
+      tooltip: tooltipConfig(),
+    },
+    scales: {
+      x: {
+        grid: { color: GRID_COL },
+        ticks: { color: '#8b90a0' },
+        ...( extra.xScale || {} ),
+      },
+      y: {
+        grid: { color: GRID_COL },
+        ticks: { color: '#8b90a0' },
+      },
+    },
+    ...( extra.extra || {} ),
+  };
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Platform chart instance (needs to be re-built on toggle)
+═══════════════════════════════════════════════════════════ */
+let platformChart = null;
+let allGames = [];
+
+/* ═══════════════════════════════════════════════════════════
+   Main data-load and render
+═══════════════════════════════════════════════════════════ */
+fetch('games.json')
+  .then(r => r.json())
+  .then(games => {
+    allGames = games;
+
+    const played  = games.filter(g => g.played === true);
+    const backlog = games.filter(g => g.played === false);
+
+    /* ─ Summary Cards ─ */
+    document.getElementById('stat-total-played').textContent = played.length;
+
+    const rated = played.filter(g => g.rating !== null && g.rating !== undefined);
+    if (rated.length) {
+      const avg = rated.reduce((s, g) => s + g.rating, 0) / rated.length;
+      document.getElementById('stat-avg-rating').textContent = avg.toFixed(1);
+    } else {
+      document.getElementById('stat-avg-rating').textContent = 'N/A';
+    }
+
+    // Top platform
+    const platforms = played.map(g => g.platform).filter(Boolean);
+    const topPlatform = countBy(platforms)[0]?.label || 'N/A';
+    document.getElementById('stat-top-platform').textContent = topPlatform;
+
+    // Top genre
+    const allGenres = played.flatMap(g => g.genres || []);
+    const topGenre = countBy(allGenres)[0]?.label || 'N/A';
+    document.getElementById('stat-top-genre').textContent = topGenre;
+
+    /* ─ Doughnut center ─ */
+    document.getElementById('doughnut-total').textContent = played.length;
+
+    /* ─ Backlog summary ─ */
+    document.getElementById('stat-backlog-total').textContent = backlog.length;
+    const backlogGenres = backlog.flatMap(g => g.genres || []);
+    const topBacklogGenre = countBy(backlogGenres)[0]?.label || 'N/A';
+    document.getElementById('stat-backlog-genre').textContent = topBacklogGenre;
+
+    /* ── CHART 1: Rating Distribution ── */
+    {
+      const labels = ['1','2','3','4','5','6','7','8','9','10'];
+      const counts = labels.map(l => played.filter(g => g.rating === parseInt(l)).length);
+      new Chart(document.getElementById('ratingChart'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ data: counts, backgroundColor: ACCENT, borderRadius: 4, borderSkipped: false }],
+        },
+        options: hBarOptions({
+          xScale: {
+            ticks: {
+              color: '#8b90a0',
+              stepSize: 1,
+              callback: v => Number.isInteger(v) ? v : null,
+            },
+            min: 0,
+          },
+        }),
+      });
+    }
+
+    /* ── CHART 2: Completion Status (Doughnut) ── */
+    {
+      const completed = played.filter(g => g.completionStatus === 'Completed').length;
+      const dropped   = played.filter(g => g.completionStatus === 'Dropped').length;
+      const other     = played.filter(g => g.completionStatus && g.completionStatus !== 'Completed' && g.completionStatus !== 'Dropped').length;
+
+      const labels = [];
+      const data   = [];
+      const colors = [];
+      if (completed) { labels.push('Completed'); data.push(completed); colors.push(ACCENT); }
+      if (dropped)   { labels.push('Dropped');   data.push(dropped);   colors.push(ERROR_COL); }
+      if (other)     { labels.push('Other');      data.push(other);     colors.push('rgba(139,144,160,0.6)'); }
+
+      new Chart(document.getElementById('completionChart'), {
+        type: 'doughnut',
+        data: {
+          labels,
+          datasets: [{
+            data,
+            backgroundColor: colors,
+            borderColor: 'transparent',
+            hoverOffset: 6,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '65%',
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+              labels: { color: '#8b90a0', padding: 14, font: { size: 12 } },
+            },
+            tooltip: tooltipConfig(),
+          },
+        },
+      });
+    }
+
+    /* ── CHART 3: Games by Platform (with toggle) ── */
+    buildPlatformChart(played, 'platform');
+
+    /* ── CHART 4: Games by Genre ── */
+    {
+      const counted = countBy(played.flatMap(g => g.genres || []));
+      const labels  = counted.map(d => d.label);
+      const data    = counted.map(d => d.count);
+      new Chart(document.getElementById('genreChart'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ data, backgroundColor: SUCCESS_COL, borderRadius: 4, borderSkipped: false }],
+        },
+        options: hBarOptions({
+          xScale: {
+            ticks: {
+              stepSize: 1,
+              callback: v => Number.isInteger(v) ? v : null,
+            },
+            min: 0,
+          },
+        }),
+      });
+    }
+
+    /* ── CHART 5: Games Played Over Time ── */
+    {
+      const yearMap = {};
+      played.forEach(g => {
+        if (g.datePlayed) {
+          const yr = g.datePlayed.slice(0, 4);
+          yearMap[yr] = (yearMap[yr] || 0) + 1;
+        }
+      });
+      const years = Object.keys(yearMap).sort();
+      const counts = years.map(y => yearMap[y]);
+
+      new Chart(document.getElementById('timeChart'), {
+        type: 'bar',
+        data: {
+          labels: years,
+          datasets: [{
+            data: counts,
+            backgroundColor: ACCENT,
+            borderRadius: 4,
+            borderSkipped: false,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: tooltipConfig(),
+          },
+          scales: {
+            x: { grid: { color: GRID_COL }, ticks: { color: '#8b90a0' } },
+            y: {
+              grid: { color: GRID_COL },
+              ticks: {
+                color: '#8b90a0',
+                stepSize: 1,
+                callback: v => Number.isInteger(v) ? v : null,
+              },
+              min: 0,
+            },
+          },
+        },
+      });
+    }
+
+    /* ── CHART 6: Avg Rating by Platform Type ── */
+    {
+      const ptMap = {};
+      const ptCount = {};
+      played.forEach(g => {
+        if (g.platformType && g.rating !== null && g.rating !== undefined) {
+          ptMap[g.platformType]   = (ptMap[g.platformType]   || 0) + g.rating;
+          ptCount[g.platformType] = (ptCount[g.platformType] || 0) + 1;
+        }
+      });
+      const entries = Object.entries(ptMap)
+        .map(([pt, sum]) => ({ label: pt, avg: sum / ptCount[pt] }))
+        .sort((a, b) => b.avg - a.avg);
+
+      new Chart(document.getElementById('avgPlatformChart'), {
+        type: 'bar',
+        data: {
+          labels: entries.map(e => e.label),
+          datasets: [{
+            data: entries.map(e => parseFloat(e.avg.toFixed(1))),
+            backgroundColor: STAR_COL,
+            borderRadius: 4,
+            borderSkipped: false,
+          }],
+        },
+        options: hBarOptions({
+          xScale: { min: 0, max: 10, ticks: { color: '#8b90a0' } },
+        }),
+      });
+    }
+
+    /* ── CHART 7: Avg Rating by Genre ── */
+    {
+      const gMap = {};
+      const gCount = {};
+      played.forEach(g => {
+        if (g.rating !== null && g.rating !== undefined) {
+          (g.genres || []).forEach(genre => {
+            gMap[genre]   = (gMap[genre]   || 0) + g.rating;
+            gCount[genre] = (gCount[genre] || 0) + 1;
+          });
+        }
+      });
+      const entries = Object.entries(gMap)
+        .map(([genre, sum]) => ({ label: genre, avg: sum / gCount[genre] }))
+        .sort((a, b) => b.avg - a.avg);
+
+      new Chart(document.getElementById('avgGenreChart'), {
+        type: 'bar',
+        data: {
+          labels: entries.map(e => e.label),
+          datasets: [{
+            data: entries.map(e => parseFloat(e.avg.toFixed(1))),
+            backgroundColor: STAR_COL,
+            borderRadius: 4,
+            borderSkipped: false,
+          }],
+        },
+        options: hBarOptions({
+          xScale: { min: 0, max: 10, ticks: { color: '#8b90a0' } },
+        }),
+      });
+    }
+
+    /* ── HEATMAP ── */
+    buildHeatmap(played);
+
+    /* ── CHART 8: Backlog by Genre ── */
+    {
+      const counted = countBy(backlog.flatMap(g => g.genres || []));
+      const labels  = counted.map(d => d.label);
+      const data    = counted.map(d => d.count);
+      new Chart(document.getElementById('backlogGenreChart'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            data,
+            backgroundColor: 'rgba(124,106,247,0.5)',
+            borderRadius: 4,
+            borderSkipped: false,
+          }],
+        },
+        options: hBarOptions({
+          xScale: {
+            ticks: {
+              stepSize: 1,
+              callback: v => Number.isInteger(v) ? v : null,
+            },
+            min: 0,
+          },
+        }),
+      });
+    }
+  })
+  .catch(err => {
+    console.error('Failed to load games.json:', err);
+  });
+
+/* ═══════════════════════════════════════════════════════════
+   Platform chart builder (used by toggle)
+═══════════════════════════════════════════════════════════ */
+function buildPlatformChart(played, mode) {
+  let counted;
+  if (mode === 'platform') {
+    counted = countBy(played.map(g => g.platform).filter(Boolean));
+  } else {
+    // Platform type aggregation
+    const typeOrder = ['PC', 'PlayStation', 'Xbox', 'Nintendo', 'Mobile'];
+    const typeMap = {};
+    played.forEach(g => {
+      if (g.platformType) {
+        typeMap[g.platformType] = (typeMap[g.platformType] || 0) + 1;
+      }
+    });
+    // Sort by typeOrder first, then alphabetically for any unlisted
+    counted = Object.entries(typeMap)
+      .sort((a, b) => {
+        const ai = typeOrder.indexOf(a[0]);
+        const bi = typeOrder.indexOf(b[0]);
+        if (ai !== -1 && bi !== -1) return bi[1] - ai[1]; // both known → by count
+        if (ai !== -1) return -1;
+        if (bi !== -1) return 1;
+        return b[1] - a[1];
+      })
+      .map(([label, count]) => ({ label, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  const labels = counted.map(d => d.label);
+  const data   = counted.map(d => d.count);
+
+  if (platformChart) {
+    platformChart.data.labels = labels;
+    platformChart.data.datasets[0].data = data;
+    platformChart.update();
+  } else {
+    platformChart = new Chart(document.getElementById('platform-chart-canvas'), {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          data,
+          backgroundColor: ACCENT,
+          borderRadius: 4,
+          borderSkipped: false,
+        }],
+      },
+      options: hBarOptions({
+        xScale: {
+          ticks: {
+            stepSize: 1,
+            callback: v => Number.isInteger(v) ? v : null,
+          },
+          min: 0,
+        },
+      }),
+    });
+  }
+}
+
+function switchPlatformView(mode) {
+  document.getElementById('btn-platform').classList.toggle('active',     mode === 'platform');
+  document.getElementById('btn-platformtype').classList.toggle('active', mode === 'platformtype');
+  buildPlatformChart(allGames.filter(g => g.played === true), mode);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Heatmap builder
+═══════════════════════════════════════════════════════════ */
+function buildHeatmap(played) {
+  // Build month map: { 'YYYY-MM': count }
+  const monthMap = {};
+  played.forEach(g => {
+    if (g.datePlayed) {
+      const key = g.datePlayed.slice(0, 7); // YYYY-MM
+      monthMap[key] = (monthMap[key] || 0) + 1;
+    }
+  });
+
+  // Collect all years, newest first
+  const years = [...new Set(
+    played
+      .filter(g => g.datePlayed)
+      .map(g => parseInt(g.datePlayed.slice(0, 4)))
+  )].sort((a, b) => b - a);
+
+  if (!years.length) {
+    document.getElementById('heatmap-container').textContent = 'No data available.';
+    return;
+  }
+
+  const MONTHS     = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const MONTH_ABBR = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+
+  const container = document.getElementById('heatmap-container');
+  container.innerHTML = '';
+
+  // Header row (month labels)
+  const headerRow = document.createElement('div');
+  headerRow.className = 'heatmap-header-row';
+  const spacer = document.createElement('div');
+  spacer.className = 'heatmap-header-spacer';
+  headerRow.appendChild(spacer);
+  MONTH_ABBR.forEach(m => {
+    const lbl = document.createElement('div');
+    lbl.className = 'heatmap-month-lbl';
+    lbl.textContent = m;
+    headerRow.appendChild(lbl);
+  });
+  container.appendChild(headerRow);
+
+  // Data rows
+  years.forEach(year => {
+    const row = document.createElement('div');
+    row.className = 'heatmap-month-row';
+
+    const yrLbl = document.createElement('div');
+    yrLbl.className = 'heatmap-year-label';
+    yrLbl.textContent = year;
+    row.appendChild(yrLbl);
+
+    for (let m = 0; m < 12; m++) {
+      const monthStr = String(m + 1).padStart(2, '0');
+      const key = `${year}-${monthStr}`;
+      const count = monthMap[key] || 0;
+
+      const cell = document.createElement('div');
+      cell.className = 'heatmap-cell';
+      const clampedCount = Math.min(count, 3);
+      cell.setAttribute('data-count', clampedCount);
+
+      // Tooltip via title attribute
+      const monthName = MONTHS[m];
+      cell.title = `${monthName} ${year}: ${count} game${count !== 1 ? 's' : ''}`;
+
+      row.appendChild(cell);
+    }
+
+    container.appendChild(row);
+  });
+}
+</script>
+</body>
+</html>

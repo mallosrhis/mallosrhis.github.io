@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── CSS Variables ─── */
+    :root {
+      --bg:           #1a1f2e;
+      --surface:      #242938;
+      --surface2:     #2c3347;
+      --accent:       #7c6af7;
+      --accent-hover: #9b8dff;
+      --text:         #e8eaf0;
+      --text-muted:   #8b90a0;
+      --border:       rgba(255,255,255,0.07);
+      --success:      #4caf82;
+      --error:        #e05c5c;
+      --radius:       10px;
+    }
+
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ─── Layout ─── */
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* ─── Back Link ─── */
+    .back-link {
+      display: inline-block;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      opacity: 0.6;
+      background: none;
+      border: none;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      transition: color 0.2s, opacity 0.2s;
+      cursor: pointer;
+    }
+    .back-link:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    /* ─── Headings ─── */
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .subtitle {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 1.8rem;
+      opacity: 0.8;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    /* ─── Cards ─── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    /* ─── Form Elements ─── */
+    .field {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+    label a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    label a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      color: var(--text);
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.92rem;
+      padding: 0.5rem 0.75rem;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+    select option {
+      background: var(--surface2);
+      color: var(--text);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* ─── Checkbox ─── */
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    .checkbox-row input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .checkbox-row span {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      user-select: none;
+    }
+
+    /* ─── Two-col row ─── */
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    /* ─── Search Row ─── */
+    .search-row {
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+    .search-row input {
+      flex: 1;
+    }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.5rem 1.1rem;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s, opacity 0.18s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover:not(:disabled) { background: var(--accent-hover); }
+
+    .btn-secondary {
+      background: var(--surface2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.14);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: #fff;
+    }
+    .btn-success:hover:not(:disabled) { background: #5ec993; }
+
+    /* ─── Button row ─── */
+    .btn-row {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    /* ─── Status / msg paragraphs ─── */
+    .msg {
+      font-size: 0.83rem;
+      margin-top: 0.55rem;
+      min-height: 1.2em;
+    }
+    .msg.ok    { color: var(--success); }
+    .msg.err   { color: var(--error); }
+    .msg.info  { color: var(--text-muted); }
+
+    /* ─── Search Results ─── */
+    #search-results {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+    }
+    .result-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      transition: border-color 0.16s, background 0.16s;
+    }
+    .result-item:hover {
+      border-color: rgba(124,106,247,0.4);
+      background: rgba(44,51,71,0.9);
+    }
+    .result-item.selected {
+      border-color: var(--accent);
+      background: rgba(124,106,247,0.08);
+    }
+    .result-thumb {
+      width: 44px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+      flex-shrink: 0;
+      background: var(--bg);
+    }
+    .result-thumb-placeholder {
+      width: 44px;
+      height: 60px;
+      border-radius: 5px;
+      flex-shrink: 0;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      opacity: 0.4;
+    }
+    .result-info { flex: 1; min-width: 0; }
+    .result-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .result-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* ─── Played fields ─── */
+    .played-fields {
+      transition: opacity 0.2s;
+    }
+    .played-fields.hidden {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    /* ─── Status Box ─── */
+    #status-box {
+      display: none;
+      border-radius: var(--radius);
+      padding: 0.85rem 1.1rem;
+      font-size: 0.88rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1.6rem;
+    }
+    #status-box.info {
+      display: block;
+      background: rgba(124,106,247,0.08);
+      border-color: rgba(124,106,247,0.25);
+      color: var(--text-muted);
+    }
+    #status-box.ok {
+      display: block;
+      background: rgba(76,175,130,0.08);
+      border-color: rgba(76,175,130,0.3);
+      color: var(--success);
+    }
+    #status-box.err {
+      display: block;
+      background: rgba(224,92,92,0.08);
+      border-color: rgba(224,92,92,0.3);
+      color: var(--error);
+    }
+
+    /* ─── Spinner ─── */
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+
+    /* ─── Divider ─── */
+    .section-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.65;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Back link -->
+    <a href="index.html" class="back-link">← Games</a>
+
+    <!-- Page title -->
+    <h1>Manage</h1>
+    <p class="subtitle">"One more mission."</p>
+
+    <!-- ── CREDENTIALS CARD ── -->
+    <div class="card">
+      <h2>Credentials</h2>
+
+      <div class="field">
+        <label for="github-repo">GitHub Repo</label>
+        <input
+          type="text"
+          id="github-repo"
+          autocomplete="username"
+          value="mallosrhis/mallosrhis.github.io"
+        />
+      </div>
+
+      <div class="field">
+        <label for="github-token">
+          GitHub Token — <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">generate fine-grained token</a>
+        </label>
+        <input
+          type="password"
+          id="github-token"
+          autocomplete="current-password"
+          placeholder="Needs Contents: read &amp; write on your repo"
+        />
+      </div>
+
+      <div class="field">
+        <label for="rawg-key">
+          RAWG API Key — <a href="https://rawg.io/apidocs" target="_blank" rel="noopener">get free key</a>
+        </label>
+        <input
+          type="password"
+          id="rawg-key"
+          autocomplete="current-password"
+          placeholder="Paste RAWG API key"
+        />
+      </div>
+
+      <p class="msg" id="cred-msg"></p>
+    </div>
+
+    <!-- ── SEARCH CARD ── -->
+    <div class="card">
+      <h2>Search for a Game</h2>
+
+      <div class="search-row">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Game title…"
+          onkeydown="if(event.key==='Enter') searchGames()"
+        />
+        <button class="btn btn-primary" id="search-btn" onclick="searchGames()">Search</button>
+      </div>
+
+      <div id="search-results"></div>
+      <p class="msg" id="search-msg"></p>
+    </div>
+
+    <!-- ── DETAILS CARD ── -->
+    <div class="card">
+      <h2>Game Details</h2>
+
+      <!-- Backlog toggle -->
+      <label class="checkbox-row" for="is-backlog">
+        <input type="checkbox" id="is-backlog" onchange="toggleBacklog()" />
+        <span>Add to Backlog (haven't played yet)</span>
+      </label>
+
+      <!-- Title -->
+      <div class="field">
+        <label for="f-title">Title <span class="section-note" style="display:inline">(edit for remaster/remake versions)</span></label>
+        <input type="text" id="f-title" autocomplete="off" placeholder="Game title" />
+      </div>
+
+      <!-- Year -->
+      <div class="field">
+        <label for="f-year">Release Year</label>
+        <input type="number" id="f-year" min="1970" max="2099" placeholder="e.g. 2024" />
+      </div>
+
+      <!-- Played fields (hidden when backlog) -->
+      <div class="played-fields" id="played-fields">
+
+        <!-- Platform -->
+        <div class="field">
+          <label for="f-platform">Platform</label>
+          <select id="f-platform">
+            <option value="">— select platform —</option>
+            <option value="PS5">PS5</option>
+            <option value="PS4">PS4</option>
+            <option value="PS3">PS3</option>
+            <option value="PS2">PS2</option>
+            <option value="PS1">PS1</option>
+            <option value="Xbox Series X/S">Xbox Series X/S</option>
+            <option value="Xbox One">Xbox One</option>
+            <option value="Xbox 360">Xbox 360</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="Game Boy Advance">Game Boy Advance</option>
+            <option value="Steam">Steam</option>
+            <option value="Epic Games">Epic Games</option>
+            <option value="GOG">GOG</option>
+            <option value="Battle.net">Battle.net</option>
+            <option value="Xbox App (PC)">Xbox App (PC)</option>
+            <option value="Ubisoft Connect">Ubisoft Connect</option>
+            <option value="EA App">EA App</option>
+            <option value="Itch.io">Itch.io</option>
+            <option value="PC">PC</option>
+            <option value="iOS">iOS</option>
+            <option value="Android">Android</option>
+          </select>
+        </div>
+
+        <!-- Month / Year Played -->
+        <div class="field">
+          <label>Date Played</label>
+          <div class="row-2">
+            <select id="f-month">
+              <option value="">— month —</option>
+              <option value="01">01 January</option>
+              <option value="02">02 February</option>
+              <option value="03">03 March</option>
+              <option value="04">04 April</option>
+              <option value="05">05 May</option>
+              <option value="06">06 June</option>
+              <option value="07">07 July</option>
+              <option value="08">08 August</option>
+              <option value="09">09 September</option>
+              <option value="10">10 October</option>
+              <option value="11">11 November</option>
+              <option value="12">12 December</option>
+            </select>
+            <input
+              type="number"
+              id="f-year-played"
+              min="1970"
+              max="2099"
+              placeholder="Year (e.g. 2024)"
+            />
+          </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="field">
+          <label for="f-rating">Rating (1–10)</label>
+          <input type="number" id="f-rating" min="1" max="10" placeholder="e.g. 8" />
+        </div>
+
+        <!-- Completion Status -->
+        <div class="field">
+          <label for="f-status">Completion Status</label>
+          <select id="f-status">
+            <option value="Completed">Completed</option>
+            <option value="Dropped">Dropped</option>
+          </select>
+        </div>
+
+        <!-- Notes / Description -->
+        <div class="field">
+          <label for="f-desc">Notes / Description</label>
+          <textarea id="f-desc" placeholder="Personal notes, thoughts, spoilers…"></textarea>
+        </div>
+
+      </div><!-- /.played-fields -->
+
+      <!-- Action buttons -->
+      <div class="btn-row">
+        <button class="btn btn-success" id="add-btn" onclick="addGame()">Add to Site</button>
+        <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+      </div>
+      <p class="msg" id="add-msg"></p>
+    </div>
+
+    <!-- ── STATUS BOX ── -->
+    <div id="status-box"></div>
+
+  </div><!-- /.page -->
+
+  <script>
+    // ─── State ───────────────────────────────────────────────────────────────
+    let selectedGame = null;
+    let previousResultEl = null;
+
+    // ─── Platform → Type mapping ──────────────────────────────────────────────
+    const PLATFORM_TYPE = {
+      'PS5':              'PlayStation',
+      'PS4':              'PlayStation',
+      'PS3':              'PlayStation',
+      'PS2':              'PlayStation',
+      'PS1':              'PlayStation',
+      'Xbox Series X/S':  'Xbox',
+      'Xbox One':         'Xbox',
+      'Xbox 360':         'Xbox',
+      'Nintendo Switch':  'Nintendo',
+      'Game Boy Advance': 'Nintendo',
+      'Steam':            'PC',
+      'Epic Games':       'PC',
+      'GOG':              'PC',
+      'Battle.net':       'PC',
+      'Xbox App (PC)':    'PC',
+      'Ubisoft Connect':  'PC',
+      'EA App':           'PC',
+      'Itch.io':          'PC',
+      'PC':               'PC',
+      'iOS':              'Mobile',
+      'Android':          'Mobile',
+    };
+
+    // ─── XSS helper ──────────────────────────────────────────────────────────
+    function escapeHtml(str) {
+      if (str == null) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    // ─── Spinner helpers ─────────────────────────────────────────────────────
+    function setSpinner(btn, on, originalHTML) {
+      if (on) {
+        btn.disabled = true;
+        btn._origHTML = btn.innerHTML;
+        btn.innerHTML = '<span class="spinner"></span>';
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = btn._origHTML || originalHTML || btn.innerHTML;
+      }
+    }
+
+    // ─── Set msg helper ──────────────────────────────────────────────────────
+    function setMsg(id, text, cls) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = text;
+      el.className = 'msg ' + (cls || '');
+    }
+
+    // ─── DOMContentLoaded: load credentials ──────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      const rawgKey    = localStorage.getItem('rawg_key')      || '';
+      const ghToken    = localStorage.getItem('github_token')  || '';
+      const ghRepo     = localStorage.getItem('github_repo')   || '';
+
+      if (rawgKey)  document.getElementById('rawg-key').value      = rawgKey;
+      if (ghToken)  document.getElementById('github-token').value  = ghToken;
+      if (ghRepo)   document.getElementById('github-repo').value   = ghRepo;
+
+      if (rawgKey || ghToken || ghRepo) {
+        setMsg('cred-msg', 'Credentials loaded.', 'info');
+      }
+
+      // Set default year-played placeholder to current year
+      document.getElementById('f-year-played').placeholder = String(new Date().getFullYear());
+    });
+
+    // ─── saveCredentials ─────────────────────────────────────────────────────
+    function saveCredentials() {
+      const rawgKey = document.getElementById('rawg-key').value.trim();
+      const ghToken = document.getElementById('github-token').value.trim();
+      const ghRepo  = document.getElementById('github-repo').value.trim();
+
+      localStorage.setItem('rawg_key',      rawgKey);
+      localStorage.setItem('github_token',  ghToken);
+      localStorage.setItem('github_repo',   ghRepo);
+
+      setMsg('cred-msg', 'Saved.', 'ok');
+    }
+
+    // ─── toggleBacklog ────────────────────────────────────────────────────────
+    function toggleBacklog() {
+      const isBacklog   = document.getElementById('is-backlog').checked;
+      const playedFields = document.getElementById('played-fields');
+      if (isBacklog) {
+        playedFields.classList.add('hidden');
+      } else {
+        playedFields.classList.remove('hidden');
+      }
+    }
+
+    // ─── searchGames ─────────────────────────────────────────────────────────
+    async function searchGames() {
+      const rawgKey = localStorage.getItem('rawg_key') || document.getElementById('rawg-key').value.trim();
+      const query   = document.getElementById('search-input').value.trim();
+      const btn     = document.getElementById('search-btn');
+      const resultsEl = document.getElementById('search-results');
+
+      setMsg('search-msg', '', '');
+      resultsEl.innerHTML = '';
+
+      if (!rawgKey) {
+        setMsg('search-msg', 'Enter your RAWG API key in Credentials first.', 'err');
+        return;
+      }
+      if (!query) {
+        setMsg('search-msg', 'Enter a game title to search.', 'err');
+        return;
+      }
+
+      setSpinner(btn, true);
+
+      try {
+        const url = `https://api.rawg.io/api/games?key=${encodeURIComponent(rawgKey)}&search=${encodeURIComponent(query)}&page_size=8`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`RAWG API error: ${res.status}`);
+        const data = await res.json();
+
+        if (!data.results || data.results.length === 0) {
+          setMsg('search-msg', 'No results found.', 'info');
+          setSpinner(btn, false);
+          return;
+        }
+
+        previousResultEl = null;
+
+        data.results.forEach(game => {
+          const year = game.released ? game.released.split('-')[0] : '—';
+          const mc   = game.metacritic != null ? `Metacritic: ${game.metacritic}` : 'Metacritic: —';
+          const img  = game.background_image;
+
+          const item = document.createElement('div');
+          item.className = 'result-item';
+          item.innerHTML = `
+            ${img
+              ? `<img class="result-thumb" src="${escapeHtml(img)}" alt="" loading="lazy" />`
+              : `<div class="result-thumb-placeholder">🎮</div>`
+            }
+            <div class="result-info">
+              <div class="result-name">${escapeHtml(game.name)}</div>
+              <div class="result-meta">${escapeHtml(year)} · ${escapeHtml(mc)} · ID: ${escapeHtml(String(game.id))}</div>
+            </div>
+          `;
+
+          item.addEventListener('click', () => selectGame(game, item));
+          resultsEl.appendChild(item);
+        });
+
+      } catch (err) {
+        setMsg('search-msg', 'Search failed: ' + err.message, 'err');
+      }
+
+      setSpinner(btn, false);
+    }
+
+    // ─── selectGame ──────────────────────────────────────────────────────────
+    function selectGame(game, el) {
+      if (previousResultEl) previousResultEl.classList.remove('selected');
+      el.classList.add('selected');
+      previousResultEl = el;
+
+      selectedGame = game;
+
+      document.getElementById('f-title').value = game.name || '';
+
+      if (game.released) {
+        document.getElementById('f-year').value = game.released.split('-')[0];
+      }
+
+      setMsg('add-msg', '', '');
+    }
+
+    // ─── addGame ─────────────────────────────────────────────────────────────
+    async function addGame() {
+      const btn       = document.getElementById('add-btn');
+      const isBacklog = document.getElementById('is-backlog').checked;
+
+      setMsg('add-msg', '', '');
+      hideStatusBox();
+
+      // Validate: game must be selected
+      if (!selectedGame) {
+        setMsg('add-msg', 'Search for and select a game first.', 'err');
+        return;
+      }
+
+      const title = document.getElementById('f-title').value.trim();
+      const year  = parseInt(document.getElementById('f-year').value, 10);
+
+      if (!title) {
+        setMsg('add-msg', 'Title is required.', 'err');
+        return;
+      }
+      if (!year || isNaN(year)) {
+        setMsg('add-msg', 'Release year is required.', 'err');
+        return;
+      }
+
+      // For played games, validate extra fields
+      let platform       = null;
+      let platformType   = null;
+      let datePlayed     = null;
+      let rating         = null;
+      let completionStatus = null;
+
+      if (!isBacklog) {
+        platform = document.getElementById('f-platform').value;
+        if (!platform) {
+          setMsg('add-msg', 'Platform is required.', 'err');
+          return;
+        }
+
+        const month      = document.getElementById('f-month').value;
+        const yearPlayed = document.getElementById('f-year-played').value.trim();
+
+        if (!month) {
+          setMsg('add-msg', 'Month played is required.', 'err');
+          return;
+        }
+        if (!yearPlayed || isNaN(parseInt(yearPlayed, 10))) {
+          setMsg('add-msg', 'Year played is required.', 'err');
+          return;
+        }
+
+        const ratingVal = document.getElementById('f-rating').value.trim();
+        if (!ratingVal || isNaN(parseInt(ratingVal, 10))) {
+          setMsg('add-msg', 'Rating (1–10) is required.', 'err');
+          return;
+        }
+
+        datePlayed       = `${yearPlayed}-${month}`;
+        platformType     = PLATFORM_TYPE[platform] || 'PC';
+        rating           = parseInt(ratingVal, 10);
+        completionStatus = document.getElementById('f-status').value;
+      }
+
+      const ghToken = localStorage.getItem('github_token') || document.getElementById('github-token').value.trim();
+      const ghRepo  = localStorage.getItem('github_repo')  || document.getElementById('github-repo').value.trim();
+
+      if (!ghToken) {
+        setMsg('add-msg', 'GitHub token is missing. Save it in Credentials first.', 'err');
+        return;
+      }
+      if (!ghRepo || !ghRepo.includes('/')) {
+        setMsg('add-msg', 'GitHub repo (owner/repo) is missing or invalid.', 'err');
+        return;
+      }
+
+      const description = document.getElementById('f-desc').value.trim();
+
+      // Build entry
+      const entry = {
+        id:               selectedGame.id,
+        slug:             selectedGame.slug || '',
+        title:            title,
+        year:             year,
+        coverImage:       selectedGame.background_image || null,
+        rawgUrl:          selectedGame.slug ? `https://rawg.io/games/${selectedGame.slug}` : null,
+        genres:           (selectedGame.genres || []).map(g => g.name),
+        metacritic:       selectedGame.metacritic != null ? selectedGame.metacritic : null,
+        played:           !isBacklog,
+        platform:         platform,
+        platformType:     platformType,
+        datePlayed:       datePlayed,
+        completionStatus: completionStatus,
+        rating:           rating,
+        description:      description || null,
+      };
+
+      setSpinner(btn, true);
+      showStatusBox('Fetching games.json from GitHub…', 'info');
+
+      try {
+        // Fetch current games.json
+        const [owner, repo] = ghRepo.split('/');
+        const apiBase = `https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/contents/games.json`;
+
+        const getRes = await fetch(apiBase, {
+          headers: {
+            'Authorization': `Bearer ${ghToken}`,
+            'Accept':        'application/vnd.github+json',
+          }
+        });
+
+        let existingGames = [];
+        let sha = null;
+
+        if (getRes.status === 200) {
+          const fileData = await getRes.json();
+          sha = fileData.sha;
+          try {
+            const decoded = atob(fileData.content.replace(/\n/g, ''));
+            existingGames = JSON.parse(decoded);
+            if (!Array.isArray(existingGames)) existingGames = [];
+          } catch {
+            existingGames = [];
+          }
+        } else if (getRes.status === 404) {
+          // File doesn't exist yet — will create it
+          existingGames = [];
+        } else {
+          const errText = await getRes.text();
+          throw new Error(`GitHub GET failed (${getRes.status}): ${errText}`);
+        }
+
+        // Duplicate check: same id AND same year
+        const duplicate = existingGames.find(g => g.id === entry.id && g.year === entry.year);
+        if (duplicate) {
+          throw new Error(`"${duplicate.title}" (${duplicate.year}) is already in your list.`);
+        }
+
+        // Append and encode
+        existingGames.push(entry);
+        const newContent = btoa(unescape(encodeURIComponent(JSON.stringify(existingGames, null, 2))));
+
+        // PUT back
+        showStatusBox('Committing to GitHub…', 'info');
+
+        const putBody = {
+          message: `Add game: ${title} (${year})`,
+          content: newContent,
+          ...(sha ? { sha } : {}),
+        };
+
+        const putRes = await fetch(apiBase, {
+          method:  'PUT',
+          headers: {
+            'Authorization': `Bearer ${ghToken}`,
+            'Accept':        'application/vnd.github+json',
+            'Content-Type':  'application/json',
+          },
+          body: JSON.stringify(putBody),
+        });
+
+        if (!putRes.ok) {
+          const errText = await putRes.text();
+          throw new Error(`GitHub PUT failed (${putRes.status}): ${errText}`);
+        }
+
+        showStatusBox(`✓ ${title} added. GitHub Pages will update in ~30–60 seconds.`, 'ok');
+        setMsg('add-msg', '', '');
+
+      } catch (err) {
+        showStatusBox(err.message, 'err');
+      }
+
+      setSpinner(btn, false);
+    }
+
+    // ─── resetForm ───────────────────────────────────────────────────────────
+    function resetForm() {
+      selectedGame    = null;
+      previousResultEl = null;
+
+      document.getElementById('is-backlog').checked     = false;
+      document.getElementById('f-title').value          = '';
+      document.getElementById('f-year').value           = '';
+      document.getElementById('f-platform').value       = '';
+      document.getElementById('f-month').value          = '';
+      document.getElementById('f-year-played').value    = '';
+      document.getElementById('f-rating').value         = '';
+      document.getElementById('f-status').value         = 'Completed';
+      document.getElementById('f-desc').value           = '';
+      document.getElementById('search-input').value     = '';
+      document.getElementById('search-results').innerHTML = '';
+      document.getElementById('played-fields').classList.remove('hidden');
+
+      setMsg('add-msg',    '', '');
+      setMsg('search-msg', '', '');
+      hideStatusBox();
+    }
+
+    // ─── Status box helpers ───────────────────────────────────────────────────
+    function showStatusBox(text, cls) {
+      const box = document.getElementById('status-box');
+      box.textContent = text;
+      box.className   = cls;
+    }
+    function hideStatusBox() {
+      const box = document.getElementById('status-box');
+      box.style.display = 'none';
+      box.className = '';
+      // Reset display via class (class removal hides it via CSS)
+      box.removeAttribute('style');
+    }
+  </script>
+</body>
+</html>
