@@ -39,7 +39,7 @@
     "datePlayed": "2024-01",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": "One of the most immersive games ever made. Arthur Morgan's story is genuinely moving. The slow pace is not a flaw â it's the point."
+    "description": "One of the most immersive games ever made. Arthur Morgan's story is genuinely moving. The slow pace is not a flaw Ã¢ÂÂ it's the point."
   },
   {
     "id": 41494,
@@ -65,7 +65,7 @@
   {
     "id": 58175,
     "slug": "god-of-war-ragnarok",
-    "title": "God of War RagnarÃ¶k",
+    "title": "God of War RagnarÃÂ¶k",
     "year": 2022,
     "coverImage": "https://media.rawg.io/media/games/121/121a38d7f7abe01de3e9046af1d1e58e.jpg",
     "rawgUrl": "https://rawg.io/games/god-of-war-ragnarok",
@@ -101,5 +101,24 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "excellent game!"
+  },
+  {
+    "id": 13633,
+    "slug": "civilization-v",
+    "title": "Sid Meier's Civilization V",
+    "year": 2010,
+    "coverImage": "https://media.rawg.io/media/games/55e/55ee6432ac2bf224610fa17e4c652107.jpg",
+    "rawgUrl": "https://rawg.io/games/civilization-v",
+    "genres": [
+      "Strategy"
+    ],
+    "metacritic": 90,
+    "played": false,
+    "platform": null,
+    "platformType": null,
+    "datePlayed": null,
+    "completionStatus": null,
+    "rating": null,
+    "description": null
   }
 ]
