@@ -341,5 +341,25 @@
     "completionStatus": "Completed",
     "rating": 6,
     "description": "Shows off DualSense features, and gives a quick Playstation history recap. Creative but not an amazing game."
+  },
+  {
+    "id": 2462,
+    "slug": "uncharted-4-a-thiefs-end",
+    "title": "Uncharted 4: A Thief’s End",
+    "year": 2016,
+    "coverImage": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
+    "rawgUrl": "https://rawg.io/games/uncharted-4-a-thiefs-end",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 93,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-05",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great story. Loved seeing Drake and his brother Sam's past."
   }
 ]
