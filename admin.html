@@ -857,7 +857,7 @@
           const fileData = await getRes.json();
           sha = fileData.sha;
           try {
-            const decoded = atob(fileData.content.replace(/\n/g, ''));
+            const decoded = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
             existingGames = JSON.parse(decoded);
             if (!Array.isArray(existingGames)) existingGames = [];
           } catch {
