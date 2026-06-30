@@ -58,5 +58,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": null
+  },
+  {
+    "id": 50778,
+    "slug": "a-way-out-2018",
+    "title": "A Way Out",
+    "year": 2018,
+    "coverImage": "https://media.rawg.io/media/games/473/473bd9a5e9522629d6cb28b701fb836a.jpg",
+    "rawgUrl": "https://rawg.io/games/a-way-out-2018",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 78,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-06",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great finale!"
   }
 ]
