@@ -199,5 +199,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Great story, map and details."
+  },
+  {
+    "id": 3254,
+    "slug": "journey",
+    "title": "Journey",
+    "year": 2012,
+    "coverImage": "https://media.rawg.io/media/games/baf/baf9905270314e07e6850cffdb51df41.jpg",
+    "rawgUrl": "https://rawg.io/games/journey",
+    "genres": [
+      "Family",
+      "Indie",
+      "Adventure"
+    ],
+    "metacritic": 92,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-12",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "A unique experience. Liked the solo journey."
   }
 ]
