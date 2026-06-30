@@ -178,5 +178,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Good story."
+  },
+  {
+    "id": 58550,
+    "slug": "ghost-of-tsushima",
+    "title": "Ghost of Tsushima",
+    "year": 2020,
+    "coverImage": "https://media.rawg.io/media/games/f24/f2493ea338fe7bd3c7d73750a85a0959.jpeg",
+    "rawgUrl": "https://rawg.io/games/ghost-of-tsushima",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 83,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-12",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great story, map and details."
   }
 ]
