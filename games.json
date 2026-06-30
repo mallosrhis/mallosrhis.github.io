@@ -17,7 +17,7 @@
     "datePlayed": "2020-07",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": null
+    "description": "The best story ever."
   },
   {
     "id": 4544,
@@ -37,7 +37,7 @@
     "datePlayed": "2022-04",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": null
+    "description": "Has a very good story."
   },
   {
     "id": 7439,
@@ -296,7 +296,7 @@
     ],
     "metacritic": 73,
     "played": true,
-    "platform": "PS4",
+    "platform": "PS5",
     "platformType": "PlayStation",
     "datePlayed": "2023-02",
     "completionStatus": "Completed",
@@ -315,7 +315,7 @@
     ],
     "metacritic": 86,
     "played": true,
-    "platform": "PS4",
+    "platform": "PS5",
     "platformType": "PlayStation",
     "datePlayed": "2023-04",
     "completionStatus": "Completed",
