@@ -138,5 +138,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Loved the huge and realistic map."
+  },
+  {
+    "id": 887,
+    "slug": "call-of-duty-infinite-warfare",
+    "title": "Call of Duty: Infinite Warfare",
+    "year": 2016,
+    "coverImage": "https://media.rawg.io/media/games/6f7/6f7341dd656910be2c2cda39193a7ec9.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-infinite-warfare",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 73,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-11",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": null
   }
 ]
