@@ -281,5 +281,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Better story than the first game. The ending was amazing. It left me conflicted about my own thoughts and decisions."
+  },
+  {
+    "id": 41494,
+    "slug": "cyberpunk-2077",
+    "title": "Cyberpunk 2077",
+    "year": 2020,
+    "coverImage": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg",
+    "rawgUrl": "https://rawg.io/games/cyberpunk-2077",
+    "genres": [
+      "Shooter",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 73,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-02",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Excellent game. Played it three times and used save files to see every ending. The story is fantastic, and its take on capitalism is one of the strongest parts of the game."
   }
 ]
