@@ -38,5 +38,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": null
+  },
+  {
+    "id": 7439,
+    "slug": "call-of-duty-ghosts",
+    "title": "Call of Duty: Ghosts",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/eb2/eb24800b4491701eca481e7c990bce4a.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-ghosts",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 68,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-06",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": null
   }
 ]
