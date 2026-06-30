@@ -423,24 +423,44 @@
     "description": "Great open world action game. Good story too."
   },
   {
-  "id": 2553,
-  "slug": "ratchet-clank",
-  "title": "Ratchet & Clank",
-  "year": 2016,
-  "coverImage": "https://media.rawg.io/media/games/d30/d30ef0c7dd4878161b1f781e297ae6a0.jpg",
-  "rawgUrl": "https://rawg.io/games/ratchet-clank",
-  "genres": [
-    "Action",
-    "Adventure",
-    "Platformer"
-  ],
-  "metacritic": 85,
-  "played": true,
-  "platform": "PS5",
-  "platformType": "PlayStation",
-  "datePlayed": "2023-07",
-  "completionStatus": "Completed",
-  "rating": 5,
-  "description": "Not my type."
-}
+    "id": 2553,
+    "slug": "ratchet-clank",
+    "title": "Ratchet & Clank",
+    "year": 2016,
+    "coverImage": "https://media.rawg.io/media/games/d30/d30ef0c7dd4878161b1f781e297ae6a0.jpg",
+    "rawgUrl": "https://rawg.io/games/ratchet-clank",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Platformer"
+    ],
+    "metacritic": 85,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-07",
+    "completionStatus": "Completed",
+    "rating": 5,
+    "description": "Not my type."
+  },
+  {
+    "id": 397473,
+    "slug": "back-4-blood",
+    "title": "Back 4 Blood",
+    "year": 2021,
+    "coverImage": "https://media.rawg.io/media/games/4fe/4feffcec6315c5f5a96442a8444431ca.jpg",
+    "rawgUrl": "https://rawg.io/games/back-4-blood",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 76,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-08",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": null
+  }
 ]
