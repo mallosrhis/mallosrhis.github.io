@@ -544,7 +544,7 @@
     "datePlayed": "2023-10",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": "Excellent game. The game makes the player bond with the characters well. Has a great ending as well, answers all the questions.\n\nâStand in the ashes of a trillion dead souls and ask the ghosts if honor matters. The silence is your answer.â - Javik\n\nâIt had to be me. Someone else might have gotten it wrong.â - Mordin Solus"
+    "description": "Excellent game. The game makes the player bond with the characters well. Has a great ending as well, answers all the questions.\n\nÃ¢ÂÂStand in the ashes of a trillion dead souls and ask the ghosts if honor matters. The silence is your answer.Ã¢ÂÂ - Javik\n\nÃ¢ÂÂIt had to be me. Someone else might have gotten it wrong.Ã¢ÂÂ - Mordin Solus"
   },
   {
     "id": 452638,
@@ -568,5 +568,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Loved it. Amazing to play as a cat. Excellent!"
+  },
+  {
+    "id": 438620,
+    "slug": "the-lord-of-the-rings-gollum",
+    "title": "The Lord of the Rings: Gollum",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/470/470fb8435cdea25bda1126e0b8e0a3b0.jpg",
+    "rawgUrl": "https://rawg.io/games/the-lord-of-the-rings-gollum",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 40,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-11",
+    "completionStatus": "Dropped",
+    "rating": 1,
+    "description": "Too bad such a good concept and game was wasted by poor execution. If it didn’t keep glitching and forcing me to restart, I’d still be playing it as a fan of the Middle Earth and stealth games."
   }
 ]
