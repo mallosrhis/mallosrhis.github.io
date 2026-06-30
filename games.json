@@ -321,5 +321,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Same as the first game in the series, I liked the map, story, and attention to detail. The only downside is that it felt too short."
+  },
+  {
+    "id": 452646,
+    "slug": "astros-playroom",
+    "title": "Astro's Playroom",
+    "year": 2020,
+    "coverImage": "https://media.rawg.io/media/games/bfe/bfe7780b7d4342540be2e5273d49e54c.jpg",
+    "rawgUrl": "https://rawg.io/games/astros-playroom",
+    "genres": [
+      "Platformer",
+      "Action"
+    ],
+    "metacritic": 83,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-04",
+    "completionStatus": "Completed",
+    "rating": 6,
+    "description": "Shows off DualSense features, and gives a quick Playstation history recap. Creative but not an amazing game."
   }
 ]
