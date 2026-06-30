@@ -99,5 +99,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Liked the AI philosophy in this game."
+  },
+  {
+    "id": 842,
+    "slug": "call-of-duty-advanced-warfare",
+    "title": "Call of Duty: Advanced Warfare",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/games/e05/e053aae547e0978ad90280a1a3d8f177.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-advanced-warfare",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 78,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-10",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": null
   }
 ]
