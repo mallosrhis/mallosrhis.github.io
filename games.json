@@ -158,5 +158,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": null
+  },
+  {
+    "id": 3137,
+    "slug": "uncharted-the-nathan-drake-collection",
+    "title": "UNCHARTED The Nathan Drake Collection",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/696/69626956eaf787f5c1b664984279060f.jpg",
+    "rawgUrl": "https://rawg.io/games/uncharted-the-nathan-drake-collection",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 86,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-11",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Good story."
   }
 ]
