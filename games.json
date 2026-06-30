@@ -18,5 +18,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": null
+  },
+  {
+    "id": 4544,
+    "slug": "red-dead-redemption",
+    "title": "Red Dead Redemption",
+    "year": 2010,
+    "coverImage": "https://media.rawg.io/media/games/686/686909717c3aa01518bc42ae2bf4259e.jpg",
+    "rawgUrl": "https://rawg.io/games/red-dead-redemption",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 95,
+    "played": true,
+    "platform": "PS3",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-04",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": null
   }
 ]
