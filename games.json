@@ -544,7 +544,7 @@
     "datePlayed": "2023-10",
     "completionStatus": "Completed",
     "rating": 10,
-    "description": "Excellent game. The game makes the player bond with the characters well. Has a great ending as well, answers all the questions.\n\nÃÂ¢ÃÂÃÂStand in the ashes of a trillion dead souls and ask the ghosts if honor matters. The silence is your answer.ÃÂ¢ÃÂÃÂ - Javik\n\nÃÂ¢ÃÂÃÂIt had to be me. Someone else might have gotten it wrong.ÃÂ¢ÃÂÃÂ - Mordin Solus"
+    "description": "Excellent game. The game makes the player bond with the characters well. Has a great ending as well, answers all the questions.\n\nÃÂÃÂ¢ÃÂÃÂÃÂÃÂStand in the ashes of a trillion dead souls and ask the ghosts if honor matters. The silence is your answer.ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ - Javik\n\nÃÂÃÂ¢ÃÂÃÂÃÂÃÂIt had to be me. Someone else might have gotten it wrong.ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ - Mordin Solus"
   },
   {
     "id": 452638,
@@ -588,7 +588,7 @@
     "datePlayed": "2023-11",
     "completionStatus": "Dropped",
     "rating": 1,
-    "description": "Too bad such a good concept and game was wasted by poor execution. If it didnât keep glitching and forcing me to restart, Iâd still be playing it as a fan of the Middle Earth and stealth games."
+    "description": "Too bad such a good concept and game was wasted by poor execution. If it didnÃ¢ÂÂt keep glitching and forcing me to restart, IÃ¢ÂÂd still be playing it as a fan of the Middle Earth and stealth games."
   },
   {
     "id": 28,
@@ -608,5 +608,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Amazing game. The beginning is a bit slow, but it becomes excellent. A vast world, strong characters, and a beautiful, emotional story."
+  },
+  {
+    "id": 18240,
+    "slug": "brothers-a-tale-of-two-sons-2",
+    "title": "Brothers: A Tale of Two Sons",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/b6b/b6b20bfc4b34e312dbc8aac53c95a348.jpg",
+    "rawgUrl": "https://rawg.io/games/brothers-a-tale-of-two-sons-2",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 90,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-12",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Another beautiful, emotional game. Unfortunately, it was too short."
   }
 ]
