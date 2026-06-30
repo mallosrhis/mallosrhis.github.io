@@ -119,5 +119,24 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": null
+  },
+  {
+    "id": 58134,
+    "slug": "marvels-spider-man",
+    "title": "Marvel's Spider-Man",
+    "year": 2018,
+    "coverImage": "https://media.rawg.io/media/games/9aa/9aa42d16d425fa6f179fc9dc2f763647.jpg",
+    "rawgUrl": "https://rawg.io/games/marvels-spider-man",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": 87,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-11",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Loved the huge and realistic map."
   }
 ]
