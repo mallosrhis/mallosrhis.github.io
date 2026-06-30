@@ -220,5 +220,25 @@
     "completionStatus": "Completed",
     "rating": 7,
     "description": "A unique experience. Liked the solo journey."
+  },
+  {
+    "id": 3636,
+    "slug": "the-last-of-us-remastered",
+    "title": "The Last Of Us Remastered",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/games/364/3642d850efb217c58feab80b8affaa89.jpg",
+    "rawgUrl": "https://rawg.io/games/the-last-of-us-remastered",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 95,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-01",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "The best story ever."
   }
 ]
