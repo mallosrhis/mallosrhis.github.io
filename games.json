@@ -502,5 +502,26 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Good story. First Lovecraftian game I ever played and I liked it."
+  },
+  {
+    "id": 50576,
+    "slug": "atomic-heart",
+    "title": "Atomic Heart",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/6ee/6ee5cbe30c6b6c299a3288337d40a0f3.jpg",
+    "rawgUrl": "https://rawg.io/games/atomic-heart",
+    "genres": [
+      "Shooter",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 73,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-09",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "I agree with the popular thought on this game being very similar to BioShock with its gameplay. I liked the world though."
   }
 ]
