@@ -345,7 +345,7 @@
   {
     "id": 2462,
     "slug": "uncharted-4-a-thiefs-end",
-    "title": "Uncharted 4: A ThiefÃ¢ÂÂs End",
+    "title": "Uncharted 4: A ThiefÃÂ¢ÃÂÃÂs End",
     "year": 2016,
     "coverImage": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
     "rawgUrl": "https://rawg.io/games/uncharted-4-a-thiefs-end",
@@ -402,5 +402,24 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Amazing game. Loved the graphics, the story and the game play. Scariest game I played."
+  },
+  {
+    "id": 29338,
+    "slug": "days-gone",
+    "title": "Days Gone",
+    "year": 2019,
+    "coverImage": "https://media.rawg.io/media/games/a79/a79d2fc90c4dbf07a8580b19600fd61d.jpg",
+    "rawgUrl": "https://rawg.io/games/days-gone",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": 74,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-07",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great open world action game. Good story too."
   }
 ]
