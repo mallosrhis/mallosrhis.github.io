@@ -240,5 +240,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "The best story ever."
+  },
+  {
+    "id": 50738,
+    "slug": "death-stranding",
+    "title": "Death Stranding",
+    "year": 2019,
+    "coverImage": "https://media.rawg.io/media/games/2ad/2ad87a4a69b1104f02435c14c5196095.jpg",
+    "rawgUrl": "https://rawg.io/games/death-stranding",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 84,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-01",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Very creative story, world and play style."
   }
 ]
