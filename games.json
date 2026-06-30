@@ -78,5 +78,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Great finale!"
+  },
+  {
+    "id": 419297,
+    "slug": "horizon-zero-dawn-complete-edition",
+    "title": "Horizon Zero Dawn Complete Edition",
+    "year": 2017,
+    "coverImage": "https://media.rawg.io/media/games/d71/d7103d99d17e4b66acd1d6ad746e5bd5.jpg",
+    "rawgUrl": "https://rawg.io/games/horizon-zero-dawn-complete-edition",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 84,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2022-10",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Liked the AI philosophy in this game."
   }
 ]
