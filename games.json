@@ -260,5 +260,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Very creative story, world and play style."
+  },
+  {
+    "id": 51325,
+    "slug": "the-last-of-us-part-2",
+    "title": "The Last of Us Part II",
+    "year": 2020,
+    "coverImage": "https://media.rawg.io/media/games/909/909974d1c7863c2027241e265fe7011f.jpg",
+    "rawgUrl": "https://rawg.io/games/the-last-of-us-part-2",
+    "genres": [
+      "Shooter",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 93,
+    "played": true,
+    "platform": "PS4",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-02",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Better story than the first game. The ending was amazing. It left me conflicted about my own thoughts and decisions."
   }
 ]
