@@ -1541,5 +1541,25 @@
     "completionStatus": "Dropped",
     "rating": 4,
     "description": "Couldn't get into it."
+  },
+  {
+    "id": 388309,
+    "slug": "diablo-iv",
+    "title": "Diablo IV",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/77d/77d51f8f4a07c3eecb0f8504027b1bf0.jpg",
+    "rawgUrl": "https://rawg.io/games/diablo-iv",
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 90,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2025-12",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Great art design, graphics, sounds, cinematics, vast world, good story. At the end it felt like more farming for items."
   }
 ]
