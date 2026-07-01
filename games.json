@@ -972,5 +972,25 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": "Not that bad but maybe racing games aren't for me."
+  },
+  {
+    "id": 3387,
+    "slug": "bloodborne",
+    "title": "Bloodborne",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/214/214b29aeff13a0ae6a70fc4426e85991.jpg",
+    "rawgUrl": "https://rawg.io/games/bloodborne",
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 92,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-03",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "A masterpiece. First souls game I played and loved it. Deserves a remake."
   }
 ]
