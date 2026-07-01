@@ -1860,5 +1860,26 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Excellent game with good story and combat mechanics. Super fun when played co-op."
+  },
+  {
+    "id": 9600,
+    "slug": "the-forest",
+    "title": "The Forest",
+    "year": 2018,
+    "coverImage": "https://media.rawg.io/media/games/1be/1be575aa6de86de328433a63fb534d9a.jpg",
+    "rawgUrl": "https://rawg.io/games/the-forest",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2021-11",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Super fun with friends. Can get scary sometimes. Crafting and farming materials wasn't boring or complicated."
   }
 ]
