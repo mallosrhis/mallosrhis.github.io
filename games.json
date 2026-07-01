@@ -2314,5 +2314,25 @@
     "completionStatus": "Completed",
     "rating": 5,
     "description": "Meh."
+  },
+  {
+    "id": 7407,
+    "slug": "saints-row-iv-re-elected",
+    "title": "Saints Row IV: Re-Elected",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/b4e/b4ec8e98127914d0a38051f641dcf2f1.jpg",
+    "rawgUrl": "https://rawg.io/games/saints-row-iv-re-elected",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 73,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-03",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Alright."
   }
 ]
