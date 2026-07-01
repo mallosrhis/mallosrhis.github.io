@@ -2592,5 +2592,24 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": "I found this game difficult."
+  },
+  {
+    "id": 10560,
+    "slug": "total-war-shogun-2",
+    "title": "Total War: SHOGUN 2",
+    "year": 2011,
+    "coverImage": "https://media.rawg.io/media/games/be9/be9cf02720c9326e11d0fda14518554f.jpg",
+    "rawgUrl": "https://rawg.io/games/total-war-shogun-2",
+    "genres": [
+      "Strategy"
+    ],
+    "metacritic": 90,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-04",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Fun Total War game."
   }
 ]
