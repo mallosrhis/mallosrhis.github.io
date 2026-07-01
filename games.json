@@ -1580,5 +1580,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Great production overall with graphics, level design and soundtracks. Creative and surreal story but requires too much attention to follow. Shooting was satisfactory."
+  },
+  {
+    "id": 10419,
+    "slug": "subnautica",
+    "title": "Subnautica",
+    "year": 2018,
+    "coverImage": "https://media.rawg.io/media/games/739/73990e3ec9f43a9e8ecafe207fa4f368.jpg",
+    "rawgUrl": "https://rawg.io/games/subnautica",
+    "genres": [
+      "Indie",
+      "Adventure"
+    ],
+    "metacritic": 83,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2026-04",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Creative story and gameplay however farming materials was boring."
   }
 ]
