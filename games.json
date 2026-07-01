@@ -1739,5 +1739,24 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Nice combat mechanics and good story."
+  },
+  {
+    "id": 10754,
+    "slug": "bioshock-remastered",
+    "title": "BioShock Remastered",
+    "year": 2016,
+    "coverImage": "https://media.rawg.io/media/games/be0/be01c3d7d8795a45615da139322ca080.jpg",
+    "rawgUrl": "https://rawg.io/games/bioshock-remastered",
+    "genres": [
+      "Shooter"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-09",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": "Creative gameplay and good story."
   }
 ]
