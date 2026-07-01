@@ -1620,5 +1620,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Great story. Excellent FPS with unique tools and good gameplay. Classic Call of Duty quality."
+  },
+  {
+    "id": 791636,
+    "slug": "call-of-duty-modern-warfare-ii",
+    "title": "Call of Duty: Modern Warfare II",
+    "year": 2022,
+    "coverImage": "https://media.rawg.io/media/games/1af/1af8edc7491c6d9d0776fc423d93548d.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-modern-warfare-ii",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2026-06",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Similar to previous title, great game. Loved the plot twist."
   }
 ]
