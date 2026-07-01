@@ -1297,5 +1297,26 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Loved it. It's nice to walk in the streets of old Baghdad. It had been a while since I played an Assassin's Creed game."
+  },
+  {
+    "id": 36,
+    "slug": "tekken-7",
+    "title": "TEKKEN 7",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/62b/62b035add7205737540d66e082b85930.jpg",
+    "rawgUrl": "https://rawg.io/games/tekken-7",
+    "genres": [
+      "Action",
+      "Fighting",
+      "Sports"
+    ],
+    "metacritic": 82,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-09",
+    "completionStatus": "Dropped",
+    "rating": 5,
+    "description": "Not a fan of learning combos."
   }
 ]
