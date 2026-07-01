@@ -1439,5 +1439,26 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "Good game."
+  },
+  {
+    "id": 452642,
+    "slug": "horizon-zero-dawn-2",
+    "title": "Horizon Forbidden West",
+    "year": 2022,
+    "coverImage": "https://media.rawg.io/media/games/bf7/bf73b105ccbba42107986bbcd96fcada.jpg",
+    "rawgUrl": "https://rawg.io/games/horizon-zero-dawn-2",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 86,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2025-03",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": "Good production but the story didn't captivate me as much as the first game."
   }
 ]
