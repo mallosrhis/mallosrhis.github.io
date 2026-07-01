@@ -1338,5 +1338,25 @@
     "completionStatus": null,
     "rating": null,
     "description": "Not a fan of learning combos."
+  },
+  {
+    "id": 662316,
+    "slug": "marvels-spider-man-2",
+    "title": "Marvel's Spider-Man 2",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/7ae/7ae5a14cdb4ab222a134c15f4629e430.jpg",
+    "rawgUrl": "https://rawg.io/games/marvels-spider-man-2",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-10",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "As great as the first game. Great atmosphere, flying around in that huge map feels good. Good story too."
   }
 ]
