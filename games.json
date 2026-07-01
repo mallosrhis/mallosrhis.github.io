@@ -1660,5 +1660,26 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Similar to previous titles, great game. Great story with an emotional ending. Left me looking forward to the next game. Loved the stealth missions in this game."
+  },
+  {
+    "id": 17572,
+    "slug": "batman-aa-goty",
+    "title": "Batman: Arkham Asylum Game of the Year Edition",
+    "year": 2010,
+    "coverImage": "https://media.rawg.io/media/games/fd8/fd882c8267a44621a0de6f9cec77ae90.jpg",
+    "rawgUrl": "https://rawg.io/games/batman-aa-goty",
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 91,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-12",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Nice combat mechanics and good story."
   }
 ]
