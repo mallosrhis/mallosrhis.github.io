@@ -1941,5 +1941,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Nice idea to make another game with the same story but different perspective."
+  },
+  {
+    "id": 21265,
+    "slug": "half-life-opposing-force",
+    "title": "Half-Life: Opposing Force",
+    "year": 1999,
+    "coverImage": "https://media.rawg.io/media/games/110/1106ebafac87cc573161f1f4f16e84cf.jpeg",
+    "rawgUrl": "https://rawg.io/games/half-life-opposing-force",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-06",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Nice idea to make another game with the same story but different perspective."
   }
 ]
