@@ -2002,5 +2002,27 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "I love isometric RPGs with good stories."
+  },
+  {
+    "id": 2446,
+    "slug": "the-incredible-adventures-of-van-helsing-ii",
+    "title": "The Incredible Adventures of Van Helsing II",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/screenshots/333/333e7121b588929dcf08eb99aff39ce5.jpg",
+    "rawgUrl": "https://rawg.io/games/the-incredible-adventures-of-van-helsing-ii",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 77,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-12",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": "I love isometric RPGs with good stories."
   }
 ]
