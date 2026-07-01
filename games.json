@@ -1218,5 +1218,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Loved it. Has a great story and game play."
+  },
+  {
+    "id": 452649,
+    "slug": "resident-evil-village",
+    "title": "Resident Evil: Village",
+    "year": 2021,
+    "coverImage": "https://media.rawg.io/media/games/6cc/6cc23249972a427f697a3d10eb57a820.jpg",
+    "rawgUrl": "https://rawg.io/games/resident-evil-village",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 83,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-08",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Another great Resident Evil game. Wish it was as scary as the one before Biohazard."
   }
 ]
