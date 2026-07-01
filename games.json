@@ -1701,5 +1701,24 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Nice combat mechanics and good story."
+  },
+  {
+    "id": 2235,
+    "slug": "batman-arkham-origins",
+    "title": "Batman: Arkham Origins",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg",
+    "rawgUrl": "https://rawg.io/games/batman-arkham-origins",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": 74,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-12",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Nice combat mechanics and good story."
   }
 ]
