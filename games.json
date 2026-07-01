@@ -1561,5 +1561,24 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Great art design, graphics, sounds, cinematics, vast world, good story. At the end it felt like more farming for items."
+  },
+  {
+    "id": 580972,
+    "slug": "alan-wake-2",
+    "title": "Alan Wake 2",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/5b9/5b963d7633cd640fa2dbc4069d1c6377.jpg",
+    "rawgUrl": "https://rawg.io/games/alan-wake-2",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2025-12",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Great production overall with graphics, level design and soundtracks. Creative and surreal story but requires too much attention to follow. Shooting was satisfactory."
   }
 ]
