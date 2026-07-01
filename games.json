@@ -1460,5 +1460,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "Good production but the story didn't captivate me as much as the first game."
+  },
+  {
+    "id": 257255,
+    "slug": "the-witcher-3-game-of-the-year",
+    "title": "The Witcher 3 Wild Hunt - Complete Edition",
+    "year": 2016,
+    "coverImage": "https://media.rawg.io/media/games/52b/52be96c19be0d79eeb8664e4ca2aabd5.jpg",
+    "rawgUrl": "https://rawg.io/games/the-witcher-3-game-of-the-year",
+    "genres": [
+      "Adventure",
+      "RPG"
+    ],
+    "metacritic": 92,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2025-09",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Excellent game. Vast map, great story and characters. Loved the moral dilemmas. The mini game Gwent was very fun also."
   }
 ]
