@@ -1133,5 +1133,28 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Another great God of War game. Loved the story."
+  },
+  {
+    "id": 452635,
+    "slug": "kena-bridge-of-spirits",
+    "title": "Kena: Bridge of Spirits",
+    "year": 2021,
+    "coverImage": "https://media.rawg.io/media/games/91d/91ddeef8d5ebee7f21faa89efa0f2201.jpg",
+    "rawgUrl": "https://rawg.io/games/kena-bridge-of-spirits",
+    "genres": [
+      "Shooter",
+      "Adventure",
+      "Action",
+      "Strategy",
+      "Indie"
+    ],
+    "metacritic": 80,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-07",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Alright."
   }
 ]
