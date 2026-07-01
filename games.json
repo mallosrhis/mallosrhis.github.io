@@ -2475,5 +2475,25 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": "I wasn't patient enough to learn this game."
+  },
+  {
+    "id": 9850,
+    "slug": "rise-of-nations-extended-edition",
+    "title": "Rise of Nations: Extended Edition",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/screenshots/b36/b36e7eef6b9d72c0f1583218e9931004.jpg",
+    "rawgUrl": "https://rawg.io/games/rise-of-nations-extended-edition",
+    "genres": [
+      "Strategy",
+      "Simulation"
+    ],
+    "metacritic": 89,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2019-08",
+    "completionStatus": "Dropped",
+    "rating": 9,
+    "description": "Good strategy game."
   }
 ]
