@@ -953,5 +953,24 @@
     "completionStatus": "Dropped",
     "rating": 6,
     "description": "Not bad but I didn't find myself keep coming back to it. Maybe a better sounds system or a headset might make the experience better."
+  },
+  {
+    "id": 24,
+    "slug": "gran-turismo-sport",
+    "title": "Gran Turismo Sport",
+    "year": 2017,
+    "coverImage": "https://media.rawg.io/media/games/e98/e989eb7026737bbb7bd386c1d16a5735.jpg",
+    "rawgUrl": "https://rawg.io/games/gran-turismo-sport",
+    "genres": [
+      "Racing"
+    ],
+    "metacritic": 75,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-03",
+    "completionStatus": "Dropped",
+    "rating": 5,
+    "description": "Not that bad but maybe racing games aren't for me."
   }
 ]
