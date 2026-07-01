@@ -2534,5 +2534,24 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": "It was probably good in its time but not worth it when Civilization 5 is available."
+  },
+  {
+    "id": 13633,
+    "slug": "civilization-v",
+    "title": "Sid Meier's Civilization V",
+    "year": 2010,
+    "coverImage": "https://media.rawg.io/media/games/55e/55ee6432ac2bf224610fa17e4c652107.jpg",
+    "rawgUrl": "https://rawg.io/games/civilization-v",
+    "genres": [
+      "Strategy"
+    ],
+    "metacritic": 90,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-05",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "One more turn!"
   }
 ]
