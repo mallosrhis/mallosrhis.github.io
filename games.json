@@ -1798,5 +1798,25 @@
     "completionStatus": "Completed",
     "rating": 7,
     "description": null
+  },
+  {
+    "id": 4013,
+    "slug": "call-of-juarez-gunslinger",
+    "title": "Call of Juarez: Gunslinger",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/a86/a86ce0afaf2d5ec2b0f048989f01795e.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-juarez-gunslinger",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 79,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2022-04",
+    "completionStatus": "Completed",
+    "rating": 6,
+    "description": null
   }
 ]
