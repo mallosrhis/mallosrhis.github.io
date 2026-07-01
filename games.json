@@ -2211,5 +2211,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "This turned out to be more fun than I thought it would be. Good level design and graphics."
+  },
+  {
+    "id": 11973,
+    "slug": "shadow-of-mordor",
+    "title": "Middle-earth: Shadow of Mordor",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg",
+    "rawgUrl": "https://rawg.io/games/shadow-of-mordor",
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 85,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-09",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Great combat mechanics and creative boss system. Makes a good addition to the Middle Earth lore too."
   }
 ]
