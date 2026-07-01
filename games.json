@@ -1640,5 +1640,25 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Similar to previous title, great game. Loved the plot twist."
+  },
+  {
+    "id": 964285,
+    "slug": "call-of-duty-modern-warfare-iii",
+    "title": "Call of Duty: Modern Warfare III",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/b17/b17ce7ab3187cc3f42d263d9511adac0.jpg",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-modern-warfare-iii",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2026-06",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Similar to previous titles, great game. Great story with an emotional ending. Left me looking forward to the next game. Loved the stealth missions in this game."
   }
 ]
