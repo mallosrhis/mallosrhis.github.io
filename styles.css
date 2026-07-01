@@ -371,6 +371,7 @@ main {
 }
 
 .modal-description {
+  white-space: pre-wrap;
   font-size: 0.9rem;
   color: var(--text);
   line-height: 1.6;
