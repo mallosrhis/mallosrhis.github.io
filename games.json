@@ -2087,5 +2087,27 @@
     "completionStatus": "Completed",
     "rating": 7,
     "description": "I love isometric RPGs with good stories."
+  },
+  {
+    "id": 23037,
+    "slug": "victor-vran",
+    "title": "Victor Vran",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/6d3/6d35c69d8435af5fcd448b08e82c3fd4.jpg",
+    "rawgUrl": "https://rawg.io/games/victor-vran",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 75,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-02",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "I love isometric RPGs with good stories. This one had a good humor."
   }
 ]
