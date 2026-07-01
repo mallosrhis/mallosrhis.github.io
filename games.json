@@ -2190,5 +2190,26 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "This turned out to be more fun than I thought it would be."
+  },
+  {
+    "id": 41,
+    "slug": "little-nightmares",
+    "title": "Little Nightmares",
+    "year": 2017,
+    "coverImage": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg",
+    "rawgUrl": "https://rawg.io/games/little-nightmares",
+    "genres": [
+      "Platformer",
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 81,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2022-08",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "This turned out to be more fun than I thought it would be. Good level design and graphics."
   }
 ]
