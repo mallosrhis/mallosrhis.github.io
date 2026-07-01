@@ -1901,5 +1901,25 @@
     "completionStatus": "Completed",
     "rating": 5,
     "description": null
+  },
+  {
+    "id": 18080,
+    "slug": "half-life",
+    "title": "Half-Life",
+    "year": 1998,
+    "coverImage": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+    "rawgUrl": "https://rawg.io/games/half-life",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 96,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2017-06",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Classic"
   }
 ]
