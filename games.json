@@ -2066,5 +2066,26 @@
     "completionStatus": "Completed",
     "rating": 7,
     "description": "I love isometric RPGs with good stories."
+  },
+  {
+    "id": 3474,
+    "slug": "lara-croft-and-the-temple-of-osiris",
+    "title": "Lara Croft and the Temple of Osiris",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/games/1fb/1fb1c5f7a71d771f440b27ce7f71e7eb.jpg",
+    "rawgUrl": "https://rawg.io/games/lara-croft-and-the-temple-of-osiris",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Puzzle"
+    ],
+    "metacritic": 73,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-07",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "I love isometric RPGs with good stories."
   }
 ]
