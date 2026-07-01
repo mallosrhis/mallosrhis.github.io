@@ -1074,5 +1074,26 @@
     "completionStatus": "Dropped",
     "rating": 6,
     "description": "It's the same FIFA game. I hate that they release the same game every year but just update the teams and add a few little features. I'd prefer one game but one that gets team updates every year."
+  },
+  {
+    "id": 898351,
+    "slug": "banishers-ghosts-of-new-eden",
+    "title": "Banishers: Ghosts of New Eden",
+    "year": 2024,
+    "coverImage": "https://media.rawg.io/media/games/165/16538fa36e5667048fe0f2aab204abde.jpg",
+    "rawgUrl": "https://rawg.io/games/banishers-ghosts-of-new-eden",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-04",
+    "completionStatus": "Completed",
+    "rating": 6,
+    "description": "Alright. Repetitive game play. Interesting story but didn't captivate me."
   }
 ]
