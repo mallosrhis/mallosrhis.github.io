@@ -1379,5 +1379,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Great game. An open world puzzle. No complaints about how they used quantum physics throughout the game. Nice stretch of physics, no huge nonsense."
+  },
+  {
+    "id": 795632,
+    "slug": "resident-evil-4-2023",
+    "title": "Resident Evil 4",
+    "year": 2023,
+    "coverImage": "https://media.rawg.io/media/games/51a/51a404b9918a0b19fc704a3ca248c69f.jpg",
+    "rawgUrl": "https://rawg.io/games/resident-evil-4-2023",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-12",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Another great Resident Evil game."
   }
 ]
