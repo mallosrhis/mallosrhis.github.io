@@ -914,5 +914,24 @@
     "completionStatus": "Dropped",
     "rating": 3,
     "description": "It was difficult to play a competitive FPS on console."
+  },
+  {
+    "id": 4491,
+    "slug": "shadow-of-the-colossus",
+    "title": "Shadow of the Colossus (2011)",
+    "year": 2011,
+    "coverImage": "https://media.rawg.io/media/games/6ac/6ac602e70c837ababdf025e997391d9c.jpg",
+    "rawgUrl": "https://rawg.io/games/shadow-of-the-colossus",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": 91,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2023-06",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Unique experience, story and gameplay. Deserves a remake for sure."
   }
 ]
