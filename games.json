@@ -2357,5 +2357,24 @@
     "completionStatus": "Completed",
     "rating": 7,
     "description": "Fun little game."
+  },
+  {
+    "id": 391399,
+    "slug": "tell-me-why",
+    "title": "Tell Me Why",
+    "year": 2020,
+    "coverImage": "https://media.rawg.io/media/games/b28/b28a135fa6133e17b228f46902a4fda4.jpg",
+    "rawgUrl": "https://rawg.io/games/tell-me-why",
+    "genres": [
+      "Adventure"
+    ],
+    "metacritic": 76,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2022-08",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Ain't nothin' but a heartache."
   }
 ]
