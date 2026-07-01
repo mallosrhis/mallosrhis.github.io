@@ -2416,5 +2416,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "Good extraordinary strategy/simulation game."
+  },
+  {
+    "id": 14512,
+    "slug": "age-of-wonders-iii",
+    "title": "Age of Wonders III",
+    "year": 2014,
+    "coverImage": "https://media.rawg.io/media/games/f95/f95ec06eddda5c5bf206618c49cd3e68.jpg",
+    "rawgUrl": "https://rawg.io/games/age-of-wonders-iii",
+    "genres": [
+      "Strategy",
+      "RPG"
+    ],
+    "metacritic": 80,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-12",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "Good turn based game."
   }
 ]
