@@ -2455,5 +2455,25 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": null
+  },
+  {
+    "id": 10340,
+    "slug": "crusader-kings-ii",
+    "title": "Crusader Kings II",
+    "year": 2012,
+    "coverImage": "https://media.rawg.io/media/games/c22/c22d804ac753c72f2617b3708a625dec.jpg",
+    "rawgUrl": "https://rawg.io/games/crusader-kings-ii",
+    "genres": [
+      "Strategy",
+      "Simulation"
+    ],
+    "metacritic": 82,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2019-10",
+    "completionStatus": "Dropped",
+    "rating": 5,
+    "description": "I wasn't patient enough to learn this game."
   }
 ]
