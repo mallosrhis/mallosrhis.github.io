@@ -1198,5 +1198,25 @@
     "completionStatus": "Dropped",
     "rating": 6,
     "description": "Fast paced game. Not bad. Didn't like the limited inventory."
+  },
+  {
+    "id": 59359,
+    "slug": "a-plague-tale-innocence",
+    "title": "A Plague Tale: Innocence",
+    "year": 2019,
+    "coverImage": "https://media.rawg.io/media/games/b4a/b4adf80c36e267b35acc3497ed2af19c.jpg",
+    "rawgUrl": "https://rawg.io/games/a-plague-tale-innocence",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 82,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-08",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Loved it. Has a great story and game play."
   }
 ]
