@@ -2293,5 +2293,26 @@
     "completionStatus": "Completed",
     "rating": 5,
     "description": "Meh."
+  },
+  {
+    "id": 7441,
+    "slug": "rusty-lake-hotel",
+    "title": "Rusty Lake Hotel",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/156/1560280d5bc572efd0dd88b088112e90.jpg",
+    "rawgUrl": "https://rawg.io/games/rusty-lake-hotel",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Puzzle"
+    ],
+    "metacritic": 65,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2022-06",
+    "completionStatus": "Completed",
+    "rating": 5,
+    "description": "Meh."
   }
 ]
