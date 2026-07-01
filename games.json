@@ -2515,5 +2515,24 @@
     "completionStatus": "Dropped",
     "rating": 5,
     "description": "It was probably good in its time but not worth it when Civilization 5 is available."
+  },
+  {
+    "id": 80309,
+    "slug": "civilization-iv",
+    "title": "Civilization IV",
+    "year": 2011,
+    "coverImage": "https://media.rawg.io/media/screenshots/935/935e50f44378ff974f72a937c8602357.jpg",
+    "rawgUrl": "https://rawg.io/games/civilization-iv",
+    "genres": [
+      "Strategy"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2019-09",
+    "completionStatus": "Dropped",
+    "rating": 5,
+    "description": "It was probably good in its time but not worth it when Civilization 5 is available."
   }
 ]
