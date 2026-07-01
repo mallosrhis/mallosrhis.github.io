@@ -1095,5 +1095,24 @@
     "completionStatus": "Completed",
     "rating": 6,
     "description": "Alright. Repetitive game play. Interesting story but didn't captivate me."
+  },
+  {
+    "id": 58175,
+    "slug": "god-of-war-2",
+    "title": "God of War (2018)",
+    "year": 2018,
+    "coverImage": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+    "rawgUrl": "https://rawg.io/games/god-of-war-2",
+    "genres": [
+      "Action"
+    ],
+    "metacritic": 94,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-05",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great game. Amazing story and graphics."
   }
 ]
