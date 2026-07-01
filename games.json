@@ -1238,5 +1238,25 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "Another great Resident Evil game. Wish it was as scary as the one before Biohazard."
+  },
+  {
+    "id": 654591,
+    "slug": "alan-wake-remastered",
+    "title": "Alan Wake Remastered",
+    "year": 2021,
+    "coverImage": "https://media.rawg.io/media/games/685/685812b147f42b08e94391defa972898.jpg",
+    "rawgUrl": "https://rawg.io/games/alan-wake-remastered",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-08",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": "Good game but it requires full attention to follow the story and at times it has slow pace. Loved the soundtrack though."
   }
 ]
