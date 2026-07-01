@@ -1839,5 +1839,26 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "Loved the stealth gameplay on this one."
+  },
+  {
+    "id": 42215,
+    "slug": "dying-light",
+    "title": "Dying Light",
+    "year": 2015,
+    "coverImage": "https://media.rawg.io/media/games/4a5/4a5ce21f529cf8fd4670b4c3188b25df.jpg",
+    "rawgUrl": "https://rawg.io/games/dying-light",
+    "genres": [
+      "Adventure",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 74,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2021-11",
+    "completionStatus": "Completed",
+    "rating": 9,
+    "description": "Excellent game with good story and combat mechanics. Super fun when played co-op."
   }
 ]
