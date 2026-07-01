@@ -1778,5 +1778,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "Creative gameplay and good story."
+  },
+  {
+    "id": 4062,
+    "slug": "bioshock-infinite",
+    "title": "BioShock Infinite",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+    "rawgUrl": "https://rawg.io/games/bioshock-infinite",
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "metacritic": 94,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2022-09",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": null
   }
 ]
