@@ -1981,5 +1981,26 @@
     "completionStatus": "Completed",
     "rating": 9,
     "description": "Good game."
+  },
+  {
+    "id": 5711,
+    "slug": "the-incredible-adventures-of-van-helsing",
+    "title": "The Incredible Adventures of Van Helsing",
+    "year": 2013,
+    "coverImage": "https://media.rawg.io/media/games/3c3/3c363e31f4add887affadc82c641de72.jpg",
+    "rawgUrl": "https://rawg.io/games/the-incredible-adventures-of-van-helsing",
+    "genres": [
+      "Indie",
+      "Action",
+      "RPG"
+    ],
+    "metacritic": 72,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-12",
+    "completionStatus": "Completed",
+    "rating": 8,
+    "description": "I love isometric RPGs with good stories."
   }
 ]
