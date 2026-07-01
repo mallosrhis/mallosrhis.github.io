@@ -1054,5 +1054,25 @@
     "completionStatus": "Completed",
     "rating": 6,
     "description": "Repetitive game play. Graphics and the sound were good."
+  },
+  {
+    "id": 969052,
+    "slug": "ea-sports-fifa-23",
+    "title": "EA SPORTS FIFA 23",
+    "year": 2022,
+    "coverImage": "https://media.rawg.io/media/screenshots/f1d/f1de4546ee52b5b96c68288c5183d579.jpg",
+    "rawgUrl": "https://rawg.io/games/ea-sports-fifa-23",
+    "genres": [
+      "Simulation",
+      "Sports"
+    ],
+    "metacritic": null,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-04",
+    "completionStatus": "Dropped",
+    "rating": 6,
+    "description": "It's the same FIFA game. I hate that they release the same game every year but just update the teams and add a few little features. I'd prefer one game but one that gets team updates every year."
   }
 ]
