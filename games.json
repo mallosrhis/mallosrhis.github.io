@@ -2046,5 +2046,25 @@
     "completionStatus": "Completed",
     "rating": 8,
     "description": "I love isometric RPGs with good stories."
+  },
+  {
+    "id": 4882,
+    "slug": "lara-croft-gol",
+    "title": "Lara Croft and the Guardian of Light",
+    "year": 2010,
+    "coverImage": "https://media.rawg.io/media/games/a92/a92272ea5cfc35b8ad6317fbd81ce0f6.jpg",
+    "rawgUrl": "https://rawg.io/games/lara-croft-gol",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "metacritic": 82,
+    "played": true,
+    "platform": "Steam",
+    "platformType": "PC",
+    "datePlayed": "2020-08",
+    "completionStatus": "Completed",
+    "rating": 7,
+    "description": "I love isometric RPGs with good stories."
   }
 ]
