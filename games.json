@@ -1358,5 +1358,26 @@
     "completionStatus": "Completed",
     "rating": 10,
     "description": "As great as the first game. Great atmosphere, flying around in that huge map feels good. Good story too."
+  },
+  {
+    "id": 58764,
+    "slug": "outer-wilds",
+    "title": "Outer Wilds",
+    "year": 2019,
+    "coverImage": "https://media.rawg.io/media/games/9f4/9f418898f5415668ca47b5f4ab1ecfeb.jpg",
+    "rawgUrl": "https://rawg.io/games/outer-wilds",
+    "genres": [
+      "Indie",
+      "Adventure",
+      "Puzzle"
+    ],
+    "metacritic": 84,
+    "played": true,
+    "platform": "PS5",
+    "platformType": "PlayStation",
+    "datePlayed": "2024-10",
+    "completionStatus": "Completed",
+    "rating": 10,
+    "description": "Great game. An open world puzzle. No complaints about how they used quantum physics throughout the game. Nice stretch of physics, no huge nonsense."
   }
 ]
